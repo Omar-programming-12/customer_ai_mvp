@@ -1,15 +1,26 @@
-from google import genai
+"""Generation layer: builds the route-specific prompt and gets the reply.
 
-from app.config import GEMINI_API_KEY
+Despite the module name (kept as-is so app/services/message_processor.py's
+import doesn't need to change), text generation runs on Groq
+(llama-3.3-70b-versatile), not Gemini. Gemini is still used elsewhere in
+app/ai/ for embeddings only (see app/ai/embeddings.py, app/ai/rag.py) -
+that part is untouched.
+"""
+
+from groq import Groq, GroqError
+
+from app.config import GROQ_API_KEY
 from app.ai.router import route_message, Route
 
 
-gemini_client = genai.Client(
-    api_key=GEMINI_API_KEY
+groq_client = Groq(
+    api_key=GROQ_API_KEY
 )
 
+_GROQ_MODEL = "llama-3.3-70b-versatile"
 
-# out_of_scope is answered directly, without a Gemini call: retrieval found
+
+# out_of_scope is answered directly, without a generation call: retrieval found
 # no meaningful signal at all, so there is nothing genuine to generate from,
 # and a fixed reply can't drift into treating the question as a company
 # question it has no answer for.
@@ -98,12 +109,26 @@ def generate_ai_reply(
         customer_message=customer_message,
     )
 
-    response = gemini_client.models.generate_content(
-        model="gemini-3.7-flash",
-        contents=prompt
-    )
+    try:
+        response = groq_client.chat.completions.create(
+            model=_GROQ_MODEL,
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ]
+        )
 
-    if not response.text:
+    except GroqError as error:
+
+        print("Groq generation error:", error)
+
         return _FALLBACK_REPLY
 
-    return response.text.strip()
+    reply = response.choices[0].message.content
+
+    if not reply:
+        return _FALLBACK_REPLY
+
+    return reply.strip()
