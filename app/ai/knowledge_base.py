@@ -1,7 +1,11 @@
 import json
+import logging
 from pathlib import Path
 
 from app.config import KNOWLEDGE_BASE_DIR
+
+
+logger = logging.getLogger(__name__)
 
 
 SPEC_LABELS_AR = {
@@ -276,6 +280,6 @@ def load_all_chunks() -> list[str]:
 
     chunks += _load_markdown_chunks(KNOWLEDGE_BASE_DIR / "faq" / "faq.md")
 
-    print("Number of chunks:", len(chunks))
+    logger.info("Number of chunks: %d", len(chunks))
 
     return chunks

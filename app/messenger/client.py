@@ -1,6 +1,11 @@
+import logging
+
 import httpx
 
 from app.config import PAGE_ACCESS_TOKEN, PAGE_ID
+
+
+logger = logging.getLogger(__name__)
 
 
 async def send_message_to_messenger(
@@ -41,15 +46,8 @@ async def send_message_to_messenger(
         )
 
 
-    print(
-        "Meta send status:",
-        response.status_code
-    )
-
-    print(
-        "Meta send response:",
-        response.text
-    )
+    logger.info("Meta send status: %s", response.status_code)
+    logger.debug("Meta send response: %s", response.text)
 
 
     if response.status_code >= 400:

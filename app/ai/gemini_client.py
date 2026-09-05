@@ -15,6 +15,7 @@ to look up); out_of_scope never reaches Groq at all.
 """
 
 import json
+import logging
 
 from groq import Groq, GroqError
 
@@ -22,6 +23,8 @@ from app.config import GROQ_API_KEY
 from app.ai.router import route_message, Route
 from app.ai import tools
 
+
+logger = logging.getLogger(__name__)
 
 groq_client = Groq(
     api_key=GROQ_API_KEY
@@ -56,6 +59,10 @@ _TOOL_USAGE_RULES = """
 - إذا أرجعت الأداة نتيجة فارغة (لا يوجد منتج/فرع/عرض مطابق)، فهذا يعني أن
   هذا الصنف غير متوفر لدى الشركة فعليًا - قل ذلك بوضوح، ولا تخترع بديلاً
   غير موجود في نتيجة الأداة أو في الـContext.
+- إذا كان الـContext الحالي غير كافٍ للإجابة عن سؤال عام/سياسة، ورأيت أن
+  صياغة العميل قد لا تكون تطابقت جيدًا (مثلاً كلمة عامية أو مكتوبة بحروف
+  لاتينية)، استخدم search_knowledge_base بصياغة أوضح قبل أن تقول إن
+  المعلومة غير متوفرة.
 """
 
 _COMPANY_CONFIDENT_PROMPT = """
@@ -146,11 +153,19 @@ def _execute_tool_call(tool_call) -> dict:
         return handler(**arguments)
     except TypeError as error:
         return {"error": f"invalid arguments for {function_name}: {error}"}
+    except Exception:
+        # Any other failure inside a tool (a malformed knowledge_base
+        # entry, an unexpected data shape, ...) should come back to the
+        # model as a normal tool result it can react to - e.g. by telling
+        # the customer the lookup failed - rather than bubbling up and
+        # taking down the whole reply with the generic fallback message.
+        logger.exception("Tool %s raised an unexpected error", function_name)
+        return {"error": f"{function_name} failed unexpectedly"}
 
 
-def _generate_with_tools(prompt: str) -> str | None:
+def _generate_with_tools(prompt: str, history: list[dict]) -> str | None:
 
-    messages = [{"role": "user", "content": prompt}]
+    messages = [*history, {"role": "user", "content": prompt}]
 
     for _ in range(_MAX_TOOL_ROUNDS):
 
@@ -186,7 +201,12 @@ def _generate_with_tools(prompt: str) -> str | None:
 
             result = _execute_tool_call(tool_call)
 
-            print("Tool call:", tool_call.function.name, tool_call.function.arguments, "->", result)
+            logger.info(
+                "Tool call: %s(%s) -> %s",
+                tool_call.function.name,
+                tool_call.function.arguments,
+                result,
+            )
 
             messages.append({
                 "role": "tool",
@@ -205,15 +225,18 @@ def _generate_with_tools(prompt: str) -> str | None:
 
 
 def generate_ai_reply(
-    customer_message: str
+    customer_message: str,
+    history: list[dict] | None = None,
 ) -> str:
 
     decision = route_message(customer_message)
 
-    print("Route:", decision.route.value)
+    logger.info("Route: %s", decision.route.value)
 
     if decision.route == Route.OUT_OF_SCOPE:
         return _OUT_OF_SCOPE_REPLY
+
+    history = history or []
 
     prompt = _PROMPTS[decision.route].format(
         context=decision.context or "",
@@ -222,11 +245,12 @@ def generate_ai_reply(
 
     try:
         if decision.route in _ROUTES_WITH_TOOLS:
-            reply = _generate_with_tools(prompt)
+            reply = _generate_with_tools(prompt, history)
         else:
             response = groq_client.chat.completions.create(
                 model=_GROQ_MODEL,
                 messages=[
+                    *history,
                     {
                         "role": "user",
                         "content": prompt
@@ -235,9 +259,9 @@ def generate_ai_reply(
             )
             reply = response.choices[0].message.content
 
-    except GroqError as error:
+    except GroqError:
 
-        print("Groq generation error:", error)
+        logger.exception("Groq generation error")
 
         return _FALLBACK_REPLY
 

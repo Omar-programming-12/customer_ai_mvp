@@ -1,12 +1,18 @@
 """Structured-data tools for the LLM (Groq function-calling).
 
-Deterministic, pure-Python lookups directly over knowledge_base/*.json -
-no Gemini/Groq calls, no semantic embeddings, no RAG involved. Each
-function here can be called and tested directly with plain arguments, and
-is also exposed to Groq as a callable "tool" (see TOOL_SPECS/TOOL_FUNCTIONS
-below) so the model can request an exact structured fact - a price, a
-spec, a branch's hours, the active offers - instead of inferring one from
-loosely-related RAG context chunks.
+Five of the six tools here are deterministic, pure-Python lookups
+directly over knowledge_base/*.json - no Gemini/Groq calls, no semantic
+embeddings, no RAG involved. Each can be called and tested directly with
+plain arguments, and is also exposed to Groq as a callable "tool" (see
+TOOL_SPECS/TOOL_FUNCTIONS below) so the model can request an exact
+structured fact - a price, a spec, a branch's hours, the active offers -
+instead of inferring one from loosely-related RAG context chunks.
+
+The sixth, search_knowledge_base, is the one exception: it calls into
+app.ai.rag (Gemini embeddings + BM25), giving the model an escape hatch to
+re-search with a reformulated query when the RAG context already injected
+into its prompt doesn't answer the question - e.g. a colloquial or
+partially-transliterated product name. It's clearly separated below.
 
 knowledge_base/ is the only source of truth: nothing here hardcodes a
 product, price, or branch - every tool re-reads the JSON files through
@@ -14,6 +20,8 @@ app.ai.knowledge_base's loaders on each call, the same loaders app.ai.rag
 uses to build the RAG chunks. A knowledge_base/ edit takes effect for both
 paths without any code change here.
 """
+
+import logging
 
 from app.ai.knowledge_base import (
     load_branches,
@@ -25,6 +33,8 @@ from app.ai.knowledge_base import (
 from app.ai.normalize import normalize_text, tokenize
 
 
+logger = logging.getLogger(__name__)
+
 _DEFAULT_LIMIT = 5
 _MAX_LIMIT = 20
 
@@ -34,7 +44,32 @@ def _clamp_limit(limit: int | None) -> int:
     if not limit:
         return _DEFAULT_LIMIT
 
-    return max(1, min(int(limit), _MAX_LIMIT))
+    try:
+        limit = int(limit)
+    except (TypeError, ValueError):
+        logger.warning("Could not parse limit %r as an integer, using default", limit)
+        return _DEFAULT_LIMIT
+
+    return max(1, min(limit, _MAX_LIMIT))
+
+
+def _coerce_number(value):
+    """Tool arguments arrive as JSON built by the model - normally already
+    the right type per the declared schema, but defensively coerce a
+    numeric string (e.g. "25000") rather than crashing a price comparison
+    on a str/int mismatch."""
+
+    if value is None:
+        return None
+
+    if isinstance(value, (int, float)):
+        return value
+
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        logger.warning("Could not parse %r as a number, ignoring it", value)
+        return None
 
 
 def _token_overlap(haystack: str, needle_tokens: set[str]) -> bool:
@@ -136,7 +171,16 @@ def search_products(
     allowed_ids = None
 
     if use_case:
-        allowed_ids = set(_USE_CASE_CATEGORY_IDS.get(normalize_text(use_case), []))
+        use_case_ids = _USE_CASE_CATEGORY_IDS.get(normalize_text(use_case))
+        if use_case_ids is None:
+            # An unrecognized use_case (a model passing a synonym outside
+            # the schema's enum, e.g. "coding" instead of "programming")
+            # should degrade to "no use_case filter", not to "match
+            # nothing" - the latter silently zeroes every result for a
+            # reason the caller has no way to see.
+            logger.warning("search_products: unrecognized use_case %r, ignoring it", use_case)
+        else:
+            allowed_ids = set(use_case_ids)
 
     category_ids = _resolve_category_ids(category, categories)
 
@@ -145,6 +189,9 @@ def search_products(
 
     keyword_tokens = set(tokenize(keywords)) if keywords else set()
     target_status = _AVAILABILITY_STATUS_AR.get(availability) if availability else None
+
+    max_price = _coerce_number(max_price)
+    min_price = _coerce_number(min_price)
 
     matches = []
 
@@ -362,6 +409,41 @@ def search_offers(
 
 
 # ==========================================
+# 6. Knowledge base semantic search (the one tool that calls Gemini)
+# ==========================================
+
+def search_knowledge_base(query: str) -> dict:
+    """Re-run the same hybrid RAG search app.ai.router already uses,
+    with a query the model chooses itself. Meant for when the Context
+    already provided doesn't clearly answer the question - e.g. the
+    customer's exact wording (colloquial, transliterated, or just
+    differently phrased) didn't line up well with retrieval the first
+    time, and the model has a better idea of what to search for than the
+    customer's raw message alone.
+
+    Unlike the other five tools, this one calls Gemini (an embedding
+    call) - it exists specifically to give the model that capability on
+    demand, not to avoid it."""
+
+    # Local import: avoids a module-load-time dependency from tools.py on
+    # rag.py (and the embeddings/index it loads) for the five tools that
+    # never need it - only paying that cost when this tool actually runs.
+    from app.ai import rag
+
+    result = rag.search_company(
+        question=query,
+        chunks=rag.company_chunks,
+        chunk_embeddings=rag.company_embeddings,
+        bm25_index=rag.company_bm25_index,
+        entity_anchors=rag.company_entity_anchors,
+    )
+
+    chunks = result.chunks if result.confidence != "none" else result.weak_chunks[:3]
+
+    return {"confidence": result.confidence, "results": chunks}
+
+
+# ==========================================
 # Groq tool specs + dispatch table
 # ==========================================
 
@@ -463,6 +545,28 @@ TOOL_SPECS = [
             },
         },
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "search_knowledge_base",
+            "description": (
+                "أعد البحث الدلالي في قاعدة معرفة الشركة (سياسات، أسئلة شائعة، أو أي "
+                "نص عام) بصياغة مختلفة من اختيارك. استخدمها فقط إذا كان الـContext "
+                "الحالي لا يجيب بوضوح عن سؤال العميل، أو لو صياغته العامية/المكتوبة "
+                "بحروف لاتينية لم تتطابق مع أي شيء واضح."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "صياغة بحث أوضح لسؤال العميل.",
+                    },
+                },
+                "required": ["query"],
+            },
+        },
+    },
 ]
 
 TOOL_FUNCTIONS = {
@@ -471,4 +575,5 @@ TOOL_FUNCTIONS = {
     "search_branches": search_branches,
     "search_services": search_services,
     "search_offers": search_offers,
+    "search_knowledge_base": search_knowledge_base,
 }

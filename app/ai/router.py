@@ -27,14 +27,30 @@ Every message resolves to exactly one route:
 A message that opens with a greeting but also asks something concrete
 (e.g. "صباح الخير، بكام Gaming X؟") is NOT small_talk: only a message that
 is *entirely* greeting/thanks/farewell content skips retrieval.
+
+If the first attempt finds nothing at all (confidence "none" and no
+domain-vocabulary match), one more attempt runs against a best-effort
+Franco-Arabic transliteration of the message (see
+app.ai.normalize.transliterate_franco_arabic) before settling on
+out_of_scope - a customer writing Arabic in Latin letters/digits (e.g.
+"3andko far3 f tanta?") would otherwise never match anything, since
+neither the embeddings, the domain vocabulary, nor the entity anchors
+have Latin-script text to compare against. This retry never overrides a
+result the original text already found, so it can't regress an
+already-working case - it only ever helps a case that would otherwise be
+a flat rejection.
 """
 
+import logging
 import re
 from dataclasses import dataclass
 from enum import Enum
 
 from app.ai import rag, entities
-from app.ai.normalize import normalize_text, tokenize
+from app.ai.normalize import normalize_text, tokenize, transliterate_franco_arabic
+
+
+logger = logging.getLogger(__name__)
 
 
 class Route(str, Enum):
@@ -85,10 +101,11 @@ def is_small_talk(message: str) -> bool:
     return len(tokenize(remainder)) == 0
 
 
-def route_message(message: str) -> RouteDecision:
-
-    if is_small_talk(message):
-        return RouteDecision(route=Route.SMALL_TALK)
+def _retrieve(message: str):
+    """One retrieval attempt: RAG search plus the domain-vocabulary check,
+    both against the same text. Factored out so route_message can run it
+    twice - once for the original message, once for its Franco-Arabic
+    transliteration - without duplicating the two calls."""
 
     result = rag.search_company(
         question=message,
@@ -98,6 +115,35 @@ def route_message(message: str) -> RouteDecision:
         entity_anchors=rag.company_entity_anchors,
     )
 
+    domain_match = entities.is_company_domain_query(message, rag.company_category_vocabulary)
+
+    return result, domain_match
+
+
+def route_message(message: str) -> RouteDecision:
+
+    if is_small_talk(message):
+        return RouteDecision(route=Route.SMALL_TALK)
+
+    result, domain_match = _retrieve(message)
+
+    if result.confidence == "none" and not domain_match:
+
+        transliterated = transliterate_franco_arabic(message)
+
+        if transliterated != message:
+
+            fallback_result, fallback_domain_match = _retrieve(transliterated)
+
+            if fallback_result.confidence != "none" or fallback_domain_match:
+
+                logger.info(
+                    "Franco-Arabic fallback matched: %r -> %r",
+                    message, transliterated,
+                )
+
+                result, domain_match = fallback_result, fallback_domain_match
+
     if result.confidence == "none":
 
         # No chunk was confident enough on its own, but the question still
@@ -106,7 +152,7 @@ def route_message(message: str) -> RouteDecision:
         # not an out-of-scope one. Surface the best-available chunks as
         # loose context; the low_confidence prompt already only uses them
         # if they clearly answer the question, and says so otherwise.
-        if entities.is_company_domain_query(message, rag.company_category_vocabulary):
+        if domain_match:
             return RouteDecision(
                 route=Route.COMPANY_LOW_CONFIDENCE,
                 context="\n\n".join(result.weak_chunks)
