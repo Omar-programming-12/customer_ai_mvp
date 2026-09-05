@@ -140,7 +140,7 @@ def _render_product(product: dict, category_name_ar: str) -> str:
     return "\n".join(lines)
 
 
-def _render_branch(branch: dict) -> str:
+def render_branch(branch: dict) -> str:
 
     return (
         f"{branch['name_ar']} ({branch['city_ar']}):\n"
@@ -213,12 +213,17 @@ _POLICY_FILES = [
 ]
 
 
+def load_branches() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "branches" / "branches.json")
+
+
 def load_all_chunks() -> list[str]:
 
     company_info = _load_json(KNOWLEDGE_BASE_DIR / "company" / "company_info.json")
     categories = _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "categories.json")
     products = _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "products.json")
-    branches = _load_json(KNOWLEDGE_BASE_DIR / "branches" / "branches.json")
+    branches = load_branches()
     services = _load_json(KNOWLEDGE_BASE_DIR / "services" / "services.json")
     offers = _load_json(KNOWLEDGE_BASE_DIR / "offers" / "offers.json")
 
@@ -237,7 +242,7 @@ def load_all_chunks() -> list[str]:
         for product in products
     ]
 
-    chunks += [_render_branch(branch) for branch in branches]
+    chunks += [render_branch(branch) for branch in branches]
     chunks += [_render_service(service) for service in services]
     chunks += [_render_offer(offer) for offer in offers]
 

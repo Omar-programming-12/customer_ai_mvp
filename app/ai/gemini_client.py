@@ -1,12 +1,7 @@
 from google import genai
 
 from app.config import GEMINI_API_KEY
-from app.ai.rag import (
-    company_chunks,
-    company_bm25_index,
-    company_embeddings,
-    search_company
-)
+from app.ai.router import route_message, Route
 
 
 gemini_client = genai.Client(
@@ -14,44 +9,26 @@ gemini_client = genai.Client(
 )
 
 
-def generate_ai_reply(
-    customer_message: str
-) -> str:
+# out_of_scope is answered directly, without a Gemini call: retrieval found
+# no meaningful signal at all, so there is nothing genuine to generate from,
+# and a fixed reply can't drift into treating the question as a company
+# question it has no answer for.
+_OUT_OF_SCOPE_REPLY = "أنا هنا للمساعدة في استفسارات NovaTech فقط 🙂"
 
-    results = search_company(
-        question=customer_message,
-        chunks=company_chunks,
-        chunk_embeddings=company_embeddings,
-        bm25_index=company_bm25_index,
-        top_k=3
-    )
-
-    print("Retrieved results:")
-    print(results)
-
-    if results:
-        context = "\n\n".join(
-            result["chunk"]
-            for result in results
-        )
-    else:
-        context = "لا توجد معلومات مرتبطة بالسؤال."
+_FALLBACK_REPLY = "عذرًا، لم أتمكن من إنشاء الرد حاليًا."
 
 
-    prompt = f"""
+_COMPANY_CONFIDENT_PROMPT = """
 أنت مساعد خدمة عملاء لشركة NovaTech.
 
-استخدم Context فقط للإجابة عن أسئلة الشركة.
+Route الحالي: company_confident.
+الـContext التالي موثوق ومرتبط بسؤال العميل بشكل مؤكد.
 
 القواعد:
 
-- لا تخترع أي معلومات.
-- إذا كانت المعلومة غير موجودة في Context، قل:
-"لا توجد معلومات كافية في بيانات الشركة."
-- إذا كانت الرسالة مجرد تحية أو شكر أو مجاملة،
-  رد بشكل طبيعي ومختصر.
+- جاوب من الـContext فقط، ولا تخترع أي معلومة غير موجودة فيه.
 - اجعل الرد قصيرًا وواضحًا ومناسبًا لـMessenger.
-- لا تذكر أنك تستخدم RAG أو Context أو نموذج ذكاء اصطناعي.
+- لا تذكر أنك تستخدم RAG أو Context أو نموذج ذكاء اصطناعي أو كلمة route.
 
 Context:
 {context}
@@ -60,6 +37,66 @@ Context:
 {customer_message}
 """
 
+_COMPANY_LOW_CONFIDENCE_PROMPT = """
+أنت مساعد خدمة عملاء لشركة NovaTech.
+
+Route الحالي: company_low_confidence.
+الـContext التالي قد يكون مرتبطًا بسؤال العميل، لكنه غير مؤكد.
+
+القواعد:
+
+- استخدم الـContext فقط إذا كان يجيب عن سؤال العميل بوضوح تام.
+- إذا لم يكن الـContext كافيًا أو واضحًا للإجابة، قل حرفيًا:
+"لا توجد معلومات كافية في بيانات الشركة."
+- لا تخترع أي معلومة غير موجودة في الـContext.
+- اجعل الرد قصيرًا وواضحًا ومناسبًا لـMessenger.
+- لا تذكر أنك تستخدم RAG أو Context أو نموذج ذكاء اصطناعي أو كلمة route.
+
+Context:
+{context}
+
+رسالة العميل:
+{customer_message}
+"""
+
+_SMALL_TALK_PROMPT = """
+أنت مساعد خدمة عملاء لشركة NovaTech.
+
+Route الحالي: small_talk.
+رسالة العميل مجرد تحية أو شكر أو مجاملة، وليست سؤالًا عن الشركة.
+
+القواعد:
+
+- رد بشكل طبيعي وودود ومختصر يناسب محادثة Messenger.
+- لا تقدم أي معلومات عن الشركة ما لم يُطلب ذلك صراحة.
+- لا تذكر أنك تستخدم نموذج ذكاء اصطناعي أو كلمة route.
+
+رسالة العميل:
+{customer_message}
+"""
+
+_PROMPTS = {
+    Route.COMPANY_CONFIDENT: _COMPANY_CONFIDENT_PROMPT,
+    Route.COMPANY_LOW_CONFIDENCE: _COMPANY_LOW_CONFIDENCE_PROMPT,
+    Route.SMALL_TALK: _SMALL_TALK_PROMPT,
+}
+
+
+def generate_ai_reply(
+    customer_message: str
+) -> str:
+
+    decision = route_message(customer_message)
+
+    print("Route:", decision.route.value)
+
+    if decision.route == Route.OUT_OF_SCOPE:
+        return _OUT_OF_SCOPE_REPLY
+
+    prompt = _PROMPTS[decision.route].format(
+        context=decision.context or "",
+        customer_message=customer_message,
+    )
 
     response = gemini_client.models.generate_content(
         model="gemini-3.7-flash",
@@ -67,8 +104,6 @@ Context:
     )
 
     if not response.text:
-        return (
-            "عذرًا، لم أتمكن من إنشاء الرد حاليًا."
-        )
+        return _FALLBACK_REPLY
 
     return response.text.strip()
