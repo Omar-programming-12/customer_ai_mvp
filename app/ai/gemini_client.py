@@ -17,7 +17,7 @@ groq_client = Groq(
     api_key=GROQ_API_KEY
 )
 
-_GROQ_MODEL = "llama-3.3-70b-versatile"
+_GROQ_MODEL = "openai/gpt-oss-120b"
 
 
 # out_of_scope is answered directly, without a generation call: retrieval found
