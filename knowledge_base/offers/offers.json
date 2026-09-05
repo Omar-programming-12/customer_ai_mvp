@@ -1,0 +1,323 @@
+[
+  {
+    "id": "OFF-01",
+    "title_ar": "خصم الطلاب",
+    "description_ar": "خصم للطلاب على فئات مختارة من اللابتوبات.",
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "applies_to_categories": [
+      "LAP",
+      "GLP"
+    ],
+    "conditions_ar": "بشرط تقديم إثبات طالب ساري.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-02",
+    "title_ar": "خصم الطلبات الكبيرة",
+    "description_ar": "خصم على الطلبات ذات القيمة الكبيرة من أي فئة.",
+    "discount_type": "percentage",
+    "discount_value": 5,
+    "applies_to_categories": "all",
+    "conditions_ar": "قيمة الطلب أكبر من 50000 جنيه.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-03",
+    "title_ar": "باقة العودة للمدارس",
+    "description_ar": "لابتوب مع شنطة وماوس بسعر مخفض.",
+    "discount_type": "fixed_amount",
+    "discount_value": 1500,
+    "applies_to_categories": [
+      "LAP",
+      "ACC"
+    ],
+    "conditions_ar": "شراء الباقة كاملة خلال فترة العرض (أغسطس - سبتمبر).",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-04",
+    "title_ar": "خصم الجمعة البيضاء",
+    "description_ar": "خصم موسمي على جميع الفئات خلال أسبوع الجمعة البيضاء.",
+    "discount_type": "percentage",
+    "discount_value": 15,
+    "applies_to_categories": "all",
+    "conditions_ar": "خلال أسبوع الجمعة البيضاء فقط.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-05",
+    "title_ar": "خصم الدفع كاش",
+    "description_ar": "خصم عند سداد كامل قيمة الطلب نقدًا داخل الفرع.",
+    "discount_type": "percentage",
+    "discount_value": 3,
+    "applies_to_categories": "all",
+    "conditions_ar": "الدفع كاملاً كاش داخل الفرع.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-06",
+    "title_ar": "خصم الشركات للكميات",
+    "description_ar": "خصم للشركات عند شراء أجهزة بكميات كبيرة.",
+    "discount_type": "percentage",
+    "discount_value": 12,
+    "applies_to_categories": [
+      "LAP",
+      "DSK",
+      "MPC"
+    ],
+    "conditions_ar": "طلب شركات موثق بأكثر من 10 أجهزة.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-07",
+    "title_ar": "عرض تريد إن (Trade-In)",
+    "description_ar": "رصيد شراء مقابل تسليم جهاز قديم يعمل.",
+    "discount_type": "fixed_amount",
+    "discount_value": null,
+    "applies_to_categories": "all",
+    "conditions_ar": "الجهاز القديم يعمل ويتم تقييمه في الفرع قبل احتساب الرصيد.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-08",
+    "title_ar": "خصم موسم الألعاب",
+    "description_ar": "خصم على لابتوبات الألعاب وكروت الشاشة.",
+    "discount_type": "percentage",
+    "discount_value": 8,
+    "applies_to_categories": [
+      "GLP",
+      "CMP"
+    ],
+    "conditions_ar": "خلال شهر نوفمبر فقط.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-09",
+    "title_ar": "عرض تجميع الجهاز المخصص",
+    "description_ar": "خصم على أسعار القطع عند تجميع جهاز كامل.",
+    "discount_type": "percentage",
+    "discount_value": 5,
+    "applies_to_categories": [
+      "CMP"
+    ],
+    "conditions_ar": "تجميع جهاز كامل من 4 قطع فأكثر في نفس الطلب.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-10",
+    "title_ar": "خصم أعضاء برنامج الولاء",
+    "description_ar": "خصم دائم لأعضاء برنامج الولاء.",
+    "discount_type": "percentage",
+    "discount_value": 3,
+    "applies_to_categories": "all",
+    "conditions_ar": "عضوية برنامج الولاء فعالة.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-11",
+    "title_ar": "عرض الشاشة المجانية مع Desktop Creator",
+    "description_ar": "شاشة NovaView مجانية عند شراء أجهزة Desktop Creator.",
+    "discount_type": "bundle",
+    "discount_value": null,
+    "applies_to_categories": [
+      "DSK"
+    ],
+    "conditions_ar": "شراء Desktop Creator 1 أو Desktop Creator 2 خلال فترة العرض.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-12",
+    "title_ar": "خصم شهر رمضان",
+    "description_ar": "خصم موسمي على جميع الفئات خلال شهر رمضان.",
+    "discount_type": "percentage",
+    "discount_value": 7,
+    "applies_to_categories": "all",
+    "conditions_ar": "خلال شهر رمضان فقط.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-13",
+    "title_ar": "باقة المكتب المنزلي",
+    "description_ar": "ديسكتوب مع شاشة وكيبورد وماوس بسعر مخفض.",
+    "discount_type": "fixed_amount",
+    "discount_value": 2000,
+    "applies_to_categories": [
+      "DSK",
+      "MON",
+      "KEY",
+      "MSE"
+    ],
+    "conditions_ar": "شراء عناصر الباقة الأربعة معًا في نفس الطلب.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-14",
+    "title_ar": "خصم أول طلب",
+    "description_ar": "خصم للعملاء الجدد على أول طلب لهم.",
+    "discount_type": "percentage",
+    "discount_value": 5,
+    "applies_to_categories": "all",
+    "conditions_ar": "أول طلب فقط لكل عميل جديد.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-15",
+    "title_ar": "عرض الجملة للمدارس",
+    "description_ar": "خصم على توريد الأجهزة للمؤسسات التعليمية.",
+    "discount_type": "percentage",
+    "discount_value": 15,
+    "applies_to_categories": [
+      "LAP",
+      "DSK",
+      "TAB"
+    ],
+    "conditions_ar": "توريد أكثر من 20 جهازًا لمؤسسة تعليمية واحدة.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-16",
+    "title_ar": "خصم شراء الضمان الممتد المبكر",
+    "description_ar": "خصم ثابت عند شراء الضمان الممتد سريعًا بعد الشراء.",
+    "discount_type": "fixed_amount",
+    "discount_value": 100,
+    "applies_to_categories": "all",
+    "conditions_ar": "الشراء خلال 7 أيام من تاريخ شراء الجهاز.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-17",
+    "title_ar": "عرض الجيمنج الكامل",
+    "description_ar": "لابتوب ألعاب مع سماعة وماوس ألعاب بسعر مخفض.",
+    "discount_type": "fixed_amount",
+    "discount_value": 3000,
+    "applies_to_categories": [
+      "GLP",
+      "AUD",
+      "MSE"
+    ],
+    "conditions_ar": "شراء العناصر الثلاثة معًا خلال فترة العرض.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-18",
+    "title_ar": "خصم تجديد تراخيص البرامج",
+    "description_ar": "خصم عند تجديد ترخيص برنامج قائم قبل انتهائه.",
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "applies_to_categories": [
+      "SFT"
+    ],
+    "conditions_ar": "تجديد ترخيص قائم قبل تاريخ انتهائه.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-19",
+    "title_ar": "عرض الجهاز اللوحي للطلاب",
+    "description_ar": "خصم للطلاب على فئة الأجهزة اللوحية.",
+    "discount_type": "percentage",
+    "discount_value": 8,
+    "applies_to_categories": [
+      "TAB"
+    ],
+    "conditions_ar": "بشرط تقديم إثبات طالب ساري.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-20",
+    "title_ar": "خصم أجهزة الشبكات للشركات",
+    "description_ar": "خصم للشركات عند شراء معدات شبكات بكميات.",
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "applies_to_categories": [
+      "NET"
+    ],
+    "conditions_ar": "طلب شركات بأكثر من 3 قطع في نفس الطلب.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-21",
+    "title_ar": "عرض عيد الأم",
+    "description_ar": "خصم موسمي على الأجهزة اللوحية والصوتيات والكاميرات.",
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "applies_to_categories": [
+      "TAB",
+      "AUD",
+      "CAM"
+    ],
+    "conditions_ar": "خلال أسبوع عيد الأم فقط.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-22",
+    "title_ar": "عرض الشحن المجاني المخفض",
+    "description_ar": "خفض حد الشحن المجاني مؤقتًا خلال فترة العرض.",
+    "discount_type": "fixed_amount",
+    "discount_value": null,
+    "applies_to_categories": "all",
+    "conditions_ar": "يسري خلال فترة العرض فقط على الطلبات فوق 3000 جنيه بدلًا من 5000 جنيه.",
+    "stackable": false,
+    "status": "seasonal"
+  },
+  {
+    "id": "OFF-23",
+    "title_ar": "عرض تجديد الأجهزة القديمة للشركات",
+    "description_ar": "خصم إضافي للشركات عند استبدال أجهزة قديمة بأخرى جديدة.",
+    "discount_type": "percentage",
+    "discount_value": 10,
+    "applies_to_categories": [
+      "LAP",
+      "DSK"
+    ],
+    "conditions_ar": "تسليم 5 أجهزة قديمة فأكثر ضمن برنامج تريد إن للشركات.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-24",
+    "title_ar": "خصم منتجات الكمية المحدودة",
+    "description_ar": "خصم إضافي على المنتجات المتبقية بكمية محدودة.",
+    "discount_type": "percentage",
+    "discount_value": 5,
+    "applies_to_categories": "all",
+    "conditions_ar": "يسري فقط على المنتجات التي حالتها كمية محدودة.",
+    "stackable": false,
+    "status": "ongoing"
+  },
+  {
+    "id": "OFF-25",
+    "title_ar": "باقة المصممين الاحترافية",
+    "description_ar": "جهاز Desktop Creator مع شاشة 4K بسعر مخفض.",
+    "discount_type": "fixed_amount",
+    "discount_value": 2500,
+    "applies_to_categories": [
+      "DSK",
+      "MON"
+    ],
+    "conditions_ar": "شراء جهاز من فئة Desktop Creator مع شاشة من فئة 4K معًا.",
+    "stackable": false,
+    "status": "ongoing"
+  }
+]

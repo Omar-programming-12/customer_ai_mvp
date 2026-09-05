@@ -1,0 +1,98 @@
+[
+  {
+    "id": "LAP",
+    "name_ar": "لابتوبات عامة وأعمال",
+    "name_en": "Laptops",
+    "product_count": 10
+  },
+  {
+    "id": "GLP",
+    "name_ar": "لابتوبات ألعاب",
+    "name_en": "Gaming Laptops",
+    "product_count": 8
+  },
+  {
+    "id": "DSK",
+    "name_ar": "أجهزة كمبيوتر مكتبية",
+    "name_en": "Desktop PCs",
+    "product_count": 8
+  },
+  {
+    "id": "MPC",
+    "name_ar": "أجهزة مصغرة",
+    "name_en": "Mini PCs",
+    "product_count": 6
+  },
+  {
+    "id": "MON",
+    "name_ar": "شاشات",
+    "name_en": "Monitors",
+    "product_count": 10
+  },
+  {
+    "id": "KEY",
+    "name_ar": "لوحات مفاتيح",
+    "name_en": "Keyboards",
+    "product_count": 8
+  },
+  {
+    "id": "MSE",
+    "name_ar": "ماوس",
+    "name_en": "Mice",
+    "product_count": 8
+  },
+  {
+    "id": "STG",
+    "name_ar": "وسائط تخزين",
+    "name_en": "Storage",
+    "product_count": 12
+  },
+  {
+    "id": "NET",
+    "name_ar": "أجهزة شبكات",
+    "name_en": "Networking",
+    "product_count": 8
+  },
+  {
+    "id": "PRN",
+    "name_ar": "طابعات وماسحات ضوئية",
+    "name_en": "Printers & Scanners",
+    "product_count": 8
+  },
+  {
+    "id": "AUD",
+    "name_ar": "سماعات ومكبرات صوت",
+    "name_en": "Audio",
+    "product_count": 10
+  },
+  {
+    "id": "CAM",
+    "name_ar": "كاميرات ويب",
+    "name_en": "Webcams",
+    "product_count": 5
+  },
+  {
+    "id": "SFT",
+    "name_ar": "برامج وتراخيص",
+    "name_en": "Software & Licenses",
+    "product_count": 10
+  },
+  {
+    "id": "TAB",
+    "name_ar": "أجهزة لوحية",
+    "name_en": "Tablets",
+    "product_count": 6
+  },
+  {
+    "id": "CMP",
+    "name_ar": "قطع غيار ومكونات",
+    "name_en": "Components",
+    "product_count": 15
+  },
+  {
+    "id": "ACC",
+    "name_ar": "كابلات وإكسسوارات",
+    "name_en": "Cables & Accessories",
+    "product_count": 8
+  }
+]

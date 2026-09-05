@@ -1,0 +1,2010 @@
+[
+  {
+    "id": "NVT-LAP-001",
+    "name": "Laptop Value 15",
+    "category_id": "LAP",
+    "price_egp": 14500,
+    "specs": {
+      "processor": "Intel Core i3",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-002",
+    "name": "Student Book 15",
+    "category_id": "LAP",
+    "price_egp": 18000,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-003",
+    "name": "Laptop Air 13",
+    "category_id": "LAP",
+    "price_egp": 21000,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "screen_size": "13.3 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-004",
+    "name": "Laptop Air 14",
+    "category_id": "LAP",
+    "price_egp": 24000,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "screen_size": "14 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-005",
+    "name": "Laptop Slim 14",
+    "category_id": "LAP",
+    "price_egp": 26500,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "screen_size": "14 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-006",
+    "name": "Laptop Business 14",
+    "category_id": "LAP",
+    "price_egp": 29000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "screen_size": "14 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-007",
+    "name": "Laptop 2in1 14 Touch",
+    "category_id": "LAP",
+    "price_egp": 31000,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "screen_size": "14 بوصة تعمل باللمس"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-008",
+    "name": "Laptop Business 15 Pro",
+    "category_id": "LAP",
+    "price_egp": 33000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-009",
+    "name": "Laptop Pro 15",
+    "category_id": "LAP",
+    "price_egp": 35000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-LAP-010",
+    "name": "Laptop Creator 16",
+    "category_id": "LAP",
+    "price_egp": 42000,
+    "specs": {
+      "processor": "Intel Core i9",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "screen_size": "16 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-001",
+    "name": "Gaming Nova 15",
+    "category_id": "GLP",
+    "price_egp": 41000,
+    "specs": {
+      "processor": "AMD Ryzen 5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "gpu": "RTX 4050",
+      "refresh_rate_hz": "144Hz",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-002",
+    "name": "Gaming X2",
+    "category_id": "GLP",
+    "price_egp": 39000,
+    "specs": {
+      "processor": "AMD Ryzen 5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "gpu": "RTX 4050",
+      "refresh_rate_hz": "144Hz",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-003",
+    "name": "Gaming Stealth 14",
+    "category_id": "GLP",
+    "price_egp": 47000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4060",
+      "refresh_rate_hz": "165Hz",
+      "screen_size": "14 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-004",
+    "name": "Gaming X1",
+    "category_id": "GLP",
+    "price_egp": 45000,
+    "specs": {
+      "processor": "AMD Ryzen 7",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4060",
+      "refresh_rate_hz": "165Hz",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-005",
+    "name": "Gaming Vortex 15",
+    "category_id": "GLP",
+    "price_egp": 52000,
+    "specs": {
+      "processor": "AMD Ryzen 7",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4070",
+      "refresh_rate_hz": "165Hz",
+      "screen_size": "15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-006",
+    "name": "Gaming X3 Pro",
+    "category_id": "GLP",
+    "price_egp": 58000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4070",
+      "refresh_rate_hz": "165Hz",
+      "screen_size": "16 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-007",
+    "name": "Gaming Vortex 17",
+    "category_id": "GLP",
+    "price_egp": 64000,
+    "specs": {
+      "processor": "Intel Core i9",
+      "ram": "32GB",
+      "storage": "2TB SSD",
+      "gpu": "RTX 4080",
+      "refresh_rate_hz": "240Hz",
+      "screen_size": "17.3 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-GLP-008",
+    "name": "Gaming Titan 16",
+    "category_id": "GLP",
+    "price_egp": 89000,
+    "specs": {
+      "processor": "Intel Core i9",
+      "ram": "64GB",
+      "storage": "2TB SSD",
+      "gpu": "RTX 4090",
+      "refresh_rate_hz": "240Hz",
+      "screen_size": "16 بوصة"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-001",
+    "name": "Desktop Home 1",
+    "category_id": "DSK",
+    "price_egp": 13000,
+    "specs": {
+      "processor": "Intel Core i3",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "gpu": "مدمج"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-002",
+    "name": "Desktop Office 1",
+    "category_id": "DSK",
+    "price_egp": 15500,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "256GB SSD",
+      "gpu": "مدمج"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-003",
+    "name": "Desktop Home 2",
+    "category_id": "DSK",
+    "price_egp": 16500,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "512GB SSD",
+      "gpu": "مدمج"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-004",
+    "name": "Desktop Office 2",
+    "category_id": "DSK",
+    "price_egp": 19000,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "gpu": "مدمج"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-005",
+    "name": "Desktop Creator 1",
+    "category_id": "DSK",
+    "price_egp": 34000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4060"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-006",
+    "name": "Desktop Gaming Tower 1",
+    "category_id": "DSK",
+    "price_egp": 42000,
+    "specs": {
+      "processor": "AMD Ryzen 7",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4070"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-007",
+    "name": "Desktop Creator 2",
+    "category_id": "DSK",
+    "price_egp": 46000,
+    "specs": {
+      "processor": "Intel Core i9",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "gpu": "RTX 4070"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-DSK-008",
+    "name": "Desktop Gaming Tower 2",
+    "category_id": "DSK",
+    "price_egp": 68000,
+    "specs": {
+      "processor": "AMD Ryzen 9",
+      "ram": "32GB",
+      "storage": "2TB SSD",
+      "gpu": "RTX 4080"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MPC-001",
+    "name": "Mini PC Lite",
+    "category_id": "MPC",
+    "price_egp": 8500,
+    "specs": {
+      "processor": "Intel Core i3",
+      "ram": "8GB",
+      "storage": "256GB SSD"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MPC-002",
+    "name": "Mini PC Home",
+    "category_id": "MPC",
+    "price_egp": 10500,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "8GB",
+      "storage": "256GB SSD"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MPC-003",
+    "name": "Ultra Mini PC",
+    "category_id": "MPC",
+    "price_egp": 12000,
+    "specs": {
+      "ram": "16GB",
+      "storage": "512GB SSD"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MPC-004",
+    "name": "Mini PC Office",
+    "category_id": "MPC",
+    "price_egp": 13500,
+    "specs": {
+      "processor": "Intel Core i5",
+      "ram": "16GB",
+      "storage": "512GB SSD"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MPC-005",
+    "name": "Mini PC Pro",
+    "category_id": "MPC",
+    "price_egp": 17500,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "16GB",
+      "storage": "512GB SSD"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MPC-006",
+    "name": "Mini PC Studio",
+    "category_id": "MPC",
+    "price_egp": 22000,
+    "specs": {
+      "processor": "Intel Core i7",
+      "ram": "32GB",
+      "storage": "1TB SSD"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-001",
+    "name": "NovaView 21",
+    "category_id": "MON",
+    "price_egp": 3200,
+    "specs": {
+      "size_inch": "21.5",
+      "resolution": "1920x1080",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "75Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-002",
+    "name": "NovaView 24",
+    "category_id": "MON",
+    "price_egp": 4200,
+    "specs": {
+      "size_inch": "24",
+      "resolution": "1920x1080",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "100Hz"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-003",
+    "name": "NovaView Portable 15",
+    "category_id": "MON",
+    "price_egp": 6200,
+    "specs": {
+      "size_inch": "15.6",
+      "resolution": "1920x1080",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "60Hz"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-004",
+    "name": "NovaView 27",
+    "category_id": "MON",
+    "price_egp": 5800,
+    "specs": {
+      "size_inch": "27",
+      "resolution": "1920x1080",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "100Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-005",
+    "name": "NovaView Curved 27",
+    "category_id": "MON",
+    "price_egp": 8800,
+    "specs": {
+      "size_inch": "27",
+      "resolution": "2560x1440",
+      "panel_type": "VA منحني",
+      "refresh_rate_hz": "144Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-006",
+    "name": "NovaView Gaming 24",
+    "category_id": "MON",
+    "price_egp": 7200,
+    "specs": {
+      "size_inch": "24",
+      "resolution": "1920x1080",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "165Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-007",
+    "name": "NovaView Gaming 27",
+    "category_id": "MON",
+    "price_egp": 9500,
+    "specs": {
+      "size_inch": "27",
+      "resolution": "2560x1440",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "165Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-008",
+    "name": "NovaView 4K 27",
+    "category_id": "MON",
+    "price_egp": 12500,
+    "specs": {
+      "size_inch": "27",
+      "resolution": "3840x2160",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "60Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-009",
+    "name": "NovaView 4K 32",
+    "category_id": "MON",
+    "price_egp": 15800,
+    "specs": {
+      "size_inch": "32",
+      "resolution": "3840x2160",
+      "panel_type": "IPS",
+      "refresh_rate_hz": "60Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MON-010",
+    "name": "NovaView Curved 34 Ultrawide",
+    "category_id": "MON",
+    "price_egp": 16500,
+    "specs": {
+      "size_inch": "34",
+      "resolution": "3440x1440",
+      "panel_type": "VA منحني",
+      "refresh_rate_hz": "144Hz"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-001",
+    "name": "NovaKey Office Standard",
+    "category_id": "KEY",
+    "price_egp": 350,
+    "specs": {
+      "type": "غشائي",
+      "connectivity": "سلكي",
+      "backlight": "بدون إضاءة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-002",
+    "name": "NovaKey Compact 60%",
+    "category_id": "KEY",
+    "price_egp": 650,
+    "specs": {
+      "type": "ميكانيكي",
+      "connectivity": "سلكي",
+      "backlight": "RGB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-003",
+    "name": "NovaKey Wireless Slim",
+    "category_id": "KEY",
+    "price_egp": 750,
+    "specs": {
+      "type": "غشائي",
+      "connectivity": "لاسلكي",
+      "backlight": "بدون إضاءة"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-004",
+    "name": "NovaKey Wireless Multi-Device",
+    "category_id": "KEY",
+    "price_egp": 950,
+    "specs": {
+      "type": "غشائي",
+      "connectivity": "بلوتوث/لاسلكي",
+      "backlight": "إضاءة بيضاء"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-005",
+    "name": "NovaKey Ergonomic Split",
+    "category_id": "KEY",
+    "price_egp": 1450,
+    "specs": {
+      "type": "غشائي",
+      "connectivity": "سلكي",
+      "backlight": "بدون إضاءة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-006",
+    "name": "NovaKey Mechanical Silent",
+    "category_id": "KEY",
+    "price_egp": 1200,
+    "specs": {
+      "type": "ميكانيكي هادئ",
+      "connectivity": "سلكي",
+      "backlight": "RGB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-007",
+    "name": "NovaKey Mechanical RGB",
+    "category_id": "KEY",
+    "price_egp": 1350,
+    "specs": {
+      "type": "ميكانيكي",
+      "connectivity": "سلكي",
+      "backlight": "RGB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-KEY-008",
+    "name": "NovaKey Gaming Pro",
+    "category_id": "KEY",
+    "price_egp": 1650,
+    "specs": {
+      "type": "ميكانيكي",
+      "connectivity": "سلكي",
+      "backlight": "RGB لكل مفتاح"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-001",
+    "name": "NovaClick Compact Travel",
+    "category_id": "MSE",
+    "price_egp": 250,
+    "specs": {
+      "connectivity": "سلكي",
+      "dpi": "1000",
+      "buttons": "3"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-002",
+    "name": "NovaClick Silent",
+    "category_id": "MSE",
+    "price_egp": 350,
+    "specs": {
+      "connectivity": "سلكي",
+      "dpi": "1200",
+      "buttons": "3"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-003",
+    "name": "NovaClick Wireless",
+    "category_id": "MSE",
+    "price_egp": 450,
+    "specs": {
+      "connectivity": "لاسلكي",
+      "dpi": "1600",
+      "buttons": "4"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-004",
+    "name": "NovaClick Bluetooth",
+    "category_id": "MSE",
+    "price_egp": 550,
+    "specs": {
+      "connectivity": "بلوتوث",
+      "dpi": "1600",
+      "buttons": "4"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-005",
+    "name": "NovaClick Ergonomic",
+    "category_id": "MSE",
+    "price_egp": 600,
+    "specs": {
+      "connectivity": "سلكي",
+      "dpi": "1600",
+      "buttons": "5"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-006",
+    "name": "NovaClick Vertical",
+    "category_id": "MSE",
+    "price_egp": 750,
+    "specs": {
+      "connectivity": "لاسلكي",
+      "dpi": "1600",
+      "buttons": "5"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-007",
+    "name": "NovaClick Gaming RGB",
+    "category_id": "MSE",
+    "price_egp": 950,
+    "specs": {
+      "connectivity": "سلكي",
+      "dpi": "6400",
+      "buttons": "6"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-MSE-008",
+    "name": "NovaClick Gaming Pro",
+    "category_id": "MSE",
+    "price_egp": 1450,
+    "specs": {
+      "connectivity": "سلكي",
+      "dpi": "16000",
+      "buttons": "8"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-001",
+    "name": "NovaDrive USB Flash 32GB",
+    "category_id": "STG",
+    "price_egp": 180,
+    "specs": {
+      "type": "فلاش ميموري",
+      "capacity": "32GB",
+      "interface": "USB 3.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-002",
+    "name": "NovaDrive USB Flash 64GB",
+    "category_id": "STG",
+    "price_egp": 260,
+    "specs": {
+      "type": "فلاش ميموري",
+      "capacity": "64GB",
+      "interface": "USB 3.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-003",
+    "name": "NovaDrive USB Flash 128GB",
+    "category_id": "STG",
+    "price_egp": 380,
+    "specs": {
+      "type": "فلاش ميموري",
+      "capacity": "128GB",
+      "interface": "USB 3.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-004",
+    "name": "NovaDrive SSD 256GB",
+    "category_id": "STG",
+    "price_egp": 1400,
+    "specs": {
+      "type": "SATA SSD",
+      "capacity": "256GB",
+      "interface": "SATA III"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-005",
+    "name": "NovaDrive HDD 1TB External",
+    "category_id": "STG",
+    "price_egp": 1600,
+    "specs": {
+      "type": "هارد خارجي",
+      "capacity": "1TB",
+      "interface": "USB 3.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-006",
+    "name": "NovaDrive SSD 512GB",
+    "category_id": "STG",
+    "price_egp": 2100,
+    "specs": {
+      "type": "SATA SSD",
+      "capacity": "512GB",
+      "interface": "SATA III"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-007",
+    "name": "NovaDrive NVMe 512GB",
+    "category_id": "STG",
+    "price_egp": 2600,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacity": "512GB",
+      "interface": "PCIe 4.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-008",
+    "name": "NovaDrive HDD 2TB External",
+    "category_id": "STG",
+    "price_egp": 2400,
+    "specs": {
+      "type": "هارد خارجي",
+      "capacity": "2TB",
+      "interface": "USB 3.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-009",
+    "name": "NovaDrive SSD 1TB",
+    "category_id": "STG",
+    "price_egp": 3400,
+    "specs": {
+      "type": "SATA SSD",
+      "capacity": "1TB",
+      "interface": "SATA III"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-010",
+    "name": "NovaDrive HDD 4TB External",
+    "category_id": "STG",
+    "price_egp": 3600,
+    "specs": {
+      "type": "هارد خارجي",
+      "capacity": "4TB",
+      "interface": "USB 3.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-011",
+    "name": "NovaDrive NVMe 1TB",
+    "category_id": "STG",
+    "price_egp": 4200,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacity": "1TB",
+      "interface": "PCIe 4.0"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-STG-012",
+    "name": "NovaDrive NVMe 2TB",
+    "category_id": "STG",
+    "price_egp": 7800,
+    "specs": {
+      "type": "NVMe SSD",
+      "capacity": "2TB",
+      "interface": "PCIe 4.0"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 24,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-001",
+    "name": "NovaNet USB WiFi Adapter",
+    "category_id": "NET",
+    "price_egp": 480,
+    "specs": {
+      "type": "محول واي فاي",
+      "speed": "AC600",
+      "ports": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-002",
+    "name": "NovaNet Range Extender",
+    "category_id": "NET",
+    "price_egp": 850,
+    "specs": {
+      "type": "موسع شبكة",
+      "speed": "AC1200",
+      "ports": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-003",
+    "name": "NovaNet Switch 8-Port",
+    "category_id": "NET",
+    "price_egp": 950,
+    "specs": {
+      "type": "سويتش شبكة",
+      "speed": "1 جيجابت",
+      "ports": "8"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-004",
+    "name": "NovaNet Router AC1200",
+    "category_id": "NET",
+    "price_egp": 1200,
+    "specs": {
+      "type": "راوتر",
+      "speed": "AC1200",
+      "ports": "4"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-005",
+    "name": "NovaNet Switch 16-Port",
+    "category_id": "NET",
+    "price_egp": 1850,
+    "specs": {
+      "type": "سويتش شبكة",
+      "speed": "1 جيجابت",
+      "ports": "16"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-006",
+    "name": "NovaNet Router AX3000",
+    "category_id": "NET",
+    "price_egp": 2400,
+    "specs": {
+      "type": "راوتر واي فاي 6",
+      "speed": "AX3000",
+      "ports": "4"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-007",
+    "name": "NovaNet Mesh System (Pack of 2)",
+    "category_id": "NET",
+    "price_egp": 3800,
+    "specs": {
+      "type": "نظام مش شبكة",
+      "speed": "AX3000",
+      "ports": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-NET-008",
+    "name": "NovaNet Mesh System (Pack of 3)",
+    "category_id": "NET",
+    "price_egp": 5400,
+    "specs": {
+      "type": "نظام مش شبكة",
+      "speed": "AX3000",
+      "ports": "-"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-001",
+    "name": "NovaPrint Label Printer",
+    "category_id": "PRN",
+    "price_egp": 1600,
+    "specs": {
+      "type": "طابعة لاصقات حرارية",
+      "color_support": "أبيض وأسود",
+      "connectivity": "USB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-002",
+    "name": "NovaPrint InkJet Basic",
+    "category_id": "PRN",
+    "price_egp": 2200,
+    "specs": {
+      "type": "نافثة حبر",
+      "color_support": "ألوان",
+      "connectivity": "USB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-003",
+    "name": "NovaScan Portable",
+    "category_id": "PRN",
+    "price_egp": 2100,
+    "specs": {
+      "type": "ماسح ضوئي محمول",
+      "color_support": "ألوان",
+      "connectivity": "USB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-004",
+    "name": "NovaScan Flatbed",
+    "category_id": "PRN",
+    "price_egp": 2800,
+    "specs": {
+      "type": "ماسح ضوئي مسطح",
+      "color_support": "ألوان",
+      "connectivity": "USB"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-005",
+    "name": "NovaPrint InkJet All-in-One",
+    "category_id": "PRN",
+    "price_egp": 3400,
+    "specs": {
+      "type": "نافثة حبر (طباعة/مسح/تصوير)",
+      "color_support": "ألوان",
+      "connectivity": "USB وواي فاي"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-006",
+    "name": "NovaPrint Photo Printer",
+    "category_id": "PRN",
+    "price_egp": 3600,
+    "specs": {
+      "type": "طابعة صور",
+      "color_support": "ألوان",
+      "connectivity": "واي فاي"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-007",
+    "name": "NovaPrint Laser Mono",
+    "category_id": "PRN",
+    "price_egp": 4200,
+    "specs": {
+      "type": "ليزر",
+      "color_support": "أبيض وأسود",
+      "connectivity": "USB وواي فاي"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-PRN-008",
+    "name": "NovaPrint Laser Color",
+    "category_id": "PRN",
+    "price_egp": 7800,
+    "specs": {
+      "type": "ليزر",
+      "color_support": "ألوان",
+      "connectivity": "USB وواي فاي"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-001",
+    "name": "NovaSound Headset Wired",
+    "category_id": "AUD",
+    "price_egp": 550,
+    "specs": {
+      "type": "سماعة رأس",
+      "connectivity": "سلكي",
+      "battery_life": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-002",
+    "name": "NovaSound Earbuds",
+    "category_id": "AUD",
+    "price_egp": 650,
+    "specs": {
+      "type": "سماعة أذن لاسلكية",
+      "connectivity": "بلوتوث",
+      "battery_life": "24 ساعة (مع العلبة)"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-003",
+    "name": "NovaSound Speaker Desktop 2.0",
+    "category_id": "AUD",
+    "price_egp": 750,
+    "specs": {
+      "type": "سماعة مكتبية",
+      "connectivity": "سلكي",
+      "battery_life": "-"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-004",
+    "name": "NovaSound Speaker Portable",
+    "category_id": "AUD",
+    "price_egp": 950,
+    "specs": {
+      "type": "سماعة محمولة",
+      "connectivity": "بلوتوث",
+      "battery_life": "12 ساعة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-005",
+    "name": "NovaSound Headset Wireless",
+    "category_id": "AUD",
+    "price_egp": 1250,
+    "specs": {
+      "type": "سماعة رأس لاسلكية",
+      "connectivity": "بلوتوث",
+      "battery_life": "20 ساعة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-006",
+    "name": "NovaSound Earbuds Pro ANC",
+    "category_id": "AUD",
+    "price_egp": 1450,
+    "specs": {
+      "type": "سماعة أذن لاسلكية بعزل ضوضاء",
+      "connectivity": "بلوتوث",
+      "battery_life": "30 ساعة (مع العلبة)"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-007",
+    "name": "NovaSound Speaker Desktop 2.1",
+    "category_id": "AUD",
+    "price_egp": 1350,
+    "specs": {
+      "type": "سماعة مكتبية مع سب ووفر",
+      "connectivity": "سلكي",
+      "battery_life": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-008",
+    "name": "NovaSound Headset Gaming RGB",
+    "category_id": "AUD",
+    "price_egp": 1650,
+    "specs": {
+      "type": "سماعة رأس ألعاب",
+      "connectivity": "سلكي (7.1 محيطي)",
+      "battery_life": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-009",
+    "name": "NovaSound Soundbar",
+    "category_id": "AUD",
+    "price_egp": 2600,
+    "specs": {
+      "type": "ساوند بار",
+      "connectivity": "سلكي/بلوتوث",
+      "battery_life": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-AUD-010",
+    "name": "NovaSound Studio Monitor (Pair)",
+    "category_id": "AUD",
+    "price_egp": 4800,
+    "specs": {
+      "type": "سماعات استوديو",
+      "connectivity": "سلكي",
+      "battery_life": "-"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CAM-001",
+    "name": "NovaCam HD 720p",
+    "category_id": "CAM",
+    "price_egp": 450,
+    "specs": {
+      "resolution": "720p",
+      "fps": "30",
+      "microphone": "مدمج"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CAM-002",
+    "name": "NovaCam FHD 1080p",
+    "category_id": "CAM",
+    "price_egp": 850,
+    "specs": {
+      "resolution": "1080p",
+      "fps": "30",
+      "microphone": "مدمج"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CAM-003",
+    "name": "NovaCam Conference Wide-Angle",
+    "category_id": "CAM",
+    "price_egp": 1600,
+    "specs": {
+      "resolution": "1080p",
+      "fps": "30",
+      "microphone": "مصفوفة ميكروفونات"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CAM-004",
+    "name": "NovaCam 4K Pro",
+    "category_id": "CAM",
+    "price_egp": 2200,
+    "specs": {
+      "resolution": "4K",
+      "fps": "30",
+      "microphone": "مزدوج"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CAM-005",
+    "name": "NovaCam Streaming Kit",
+    "category_id": "CAM",
+    "price_egp": 2800,
+    "specs": {
+      "resolution": "1080p",
+      "fps": "60",
+      "microphone": "مزدوج + إضاءة حلقية"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-SFT-001",
+    "name": "NovaShield Antivirus 1-Year (1 Device)",
+    "category_id": "SFT",
+    "price_egp": 350,
+    "specs": {
+      "license_type": "مكافح فيروسات",
+      "duration": "سنة واحدة",
+      "devices_covered": "جهاز واحد"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-002",
+    "name": "NovaShield Antivirus 1-Year (3 Devices)",
+    "category_id": "SFT",
+    "price_egp": 550,
+    "specs": {
+      "license_type": "مكافح فيروسات",
+      "duration": "سنة واحدة",
+      "devices_covered": "3 أجهزة"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-003",
+    "name": "NovaBackup Cloud 100GB/Year",
+    "category_id": "SFT",
+    "price_egp": 450,
+    "specs": {
+      "license_type": "نسخ احتياطي سحابي",
+      "duration": "سنة واحدة",
+      "devices_covered": "غير محدود"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-004",
+    "name": "NovaVPN 1-Year",
+    "category_id": "SFT",
+    "price_egp": 650,
+    "specs": {
+      "license_type": "شبكة افتراضية خاصة",
+      "duration": "سنة واحدة",
+      "devices_covered": "5 أجهزة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-005",
+    "name": "NovaShield Antivirus 2-Year (3 Devices)",
+    "category_id": "SFT",
+    "price_egp": 950,
+    "specs": {
+      "license_type": "مكافح فيروسات",
+      "duration": "سنتان",
+      "devices_covered": "3 أجهزة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-006",
+    "name": "NovaBackup Cloud 500GB/Year",
+    "category_id": "SFT",
+    "price_egp": 950,
+    "specs": {
+      "license_type": "نسخ احتياطي سحابي",
+      "duration": "سنة واحدة",
+      "devices_covered": "غير محدود"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-007",
+    "name": "NovaOffice Home & Student",
+    "category_id": "SFT",
+    "price_egp": 1800,
+    "specs": {
+      "license_type": "حزمة مكتبية",
+      "duration": "مدى الحياة",
+      "devices_covered": "جهاز واحد"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-008",
+    "name": "Windows License (Home)",
+    "category_id": "SFT",
+    "price_egp": 2200,
+    "specs": {
+      "license_type": "نظام تشغيل",
+      "duration": "مدى الحياة",
+      "devices_covered": "جهاز واحد"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-009",
+    "name": "NovaOffice Business (Annual)",
+    "category_id": "SFT",
+    "price_egp": 2400,
+    "specs": {
+      "license_type": "حزمة مكتبية للشركات",
+      "duration": "سنة واحدة",
+      "devices_covered": "جهاز واحد"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-SFT-010",
+    "name": "Windows License (Pro)",
+    "category_id": "SFT",
+    "price_egp": 3200,
+    "specs": {
+      "license_type": "نظام تشغيل",
+      "duration": "مدى الحياة",
+      "devices_covered": "جهاز واحد"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": null,
+    "warranty_note_ar": "لا يخضع لضمان الأجهزة، ويعمل وفق شروط ترخيص البرنامج المحددة عند الشراء."
+  },
+  {
+    "id": "NVT-TAB-001",
+    "name": "NovaTab Kids 8",
+    "category_id": "TAB",
+    "price_egp": 3800,
+    "specs": {
+      "screen_size": "8 بوصة",
+      "ram": "3GB",
+      "storage": "32GB",
+      "battery_capacity_mah": "4000"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-TAB-002",
+    "name": "NovaTab 8 Lite",
+    "category_id": "TAB",
+    "price_egp": 5200,
+    "specs": {
+      "screen_size": "8 بوصة",
+      "ram": "4GB",
+      "storage": "64GB",
+      "battery_capacity_mah": "5000"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-TAB-003",
+    "name": "NovaTab 10",
+    "category_id": "TAB",
+    "price_egp": 7500,
+    "specs": {
+      "screen_size": "10.1 بوصة",
+      "ram": "4GB",
+      "storage": "64GB",
+      "battery_capacity_mah": "7000"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-TAB-004",
+    "name": "NovaTab 10 Pro",
+    "category_id": "TAB",
+    "price_egp": 11500,
+    "specs": {
+      "screen_size": "10.9 بوصة",
+      "ram": "8GB",
+      "storage": "128GB",
+      "battery_capacity_mah": "8000"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-TAB-005",
+    "name": "NovaTab Business 12",
+    "category_id": "TAB",
+    "price_egp": 16500,
+    "specs": {
+      "screen_size": "12.4 بوصة",
+      "ram": "8GB",
+      "storage": "256GB",
+      "battery_capacity_mah": "10000"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-TAB-006",
+    "name": "NovaTab 11 Pro Max",
+    "category_id": "TAB",
+    "price_egp": 21000,
+    "specs": {
+      "screen_size": "11 بوصة",
+      "ram": "8GB",
+      "storage": "256GB",
+      "battery_capacity_mah": "9000"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-001",
+    "name": "NovaMem RAM 8GB DDR4",
+    "category_id": "CMP",
+    "price_egp": 850,
+    "specs": {
+      "type": "رام",
+      "capacity": "8GB",
+      "speed": "DDR4"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-002",
+    "name": "NovaMem RAM 16GB DDR4",
+    "category_id": "CMP",
+    "price_egp": 1500,
+    "specs": {
+      "type": "رام",
+      "capacity": "16GB",
+      "speed": "DDR4"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-003",
+    "name": "NovaCase ATX Mid Tower",
+    "category_id": "CMP",
+    "price_egp": 2200,
+    "specs": {
+      "type": "كيس كمبيوتر",
+      "form_factor": "ATX Mid Tower"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-004",
+    "name": "NovaMem RAM 16GB DDR5",
+    "category_id": "CMP",
+    "price_egp": 2100,
+    "specs": {
+      "type": "رام",
+      "capacity": "16GB",
+      "speed": "DDR5"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-005",
+    "name": "NovaPower PSU 550W 80+ Bronze",
+    "category_id": "CMP",
+    "price_egp": 1600,
+    "specs": {
+      "type": "باور سبلاي",
+      "wattage": "550W",
+      "certification": "80+ Bronze"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-006",
+    "name": "NovaCool Liquid Cooler 240mm",
+    "category_id": "CMP",
+    "price_egp": 2800,
+    "specs": {
+      "type": "تبريد مائي",
+      "cooling_type": "Liquid 240mm",
+      "socket": "متوافق مع Intel وAMD"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-007",
+    "name": "NovaPower PSU 750W 80+ Gold",
+    "category_id": "CMP",
+    "price_egp": 2600,
+    "specs": {
+      "type": "باور سبلاي",
+      "wattage": "750W",
+      "certification": "80+ Gold"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-008",
+    "name": "NovaMem RAM 32GB DDR5",
+    "category_id": "CMP",
+    "price_egp": 3900,
+    "specs": {
+      "type": "رام",
+      "capacity": "32GB",
+      "speed": "DDR5"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-009",
+    "name": "NovaPower PSU 850W 80+ Gold",
+    "category_id": "CMP",
+    "price_egp": 3200,
+    "specs": {
+      "type": "باور سبلاي",
+      "wattage": "850W",
+      "certification": "80+ Gold"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-010",
+    "name": "NovaBoard B760 (Intel)",
+    "category_id": "CMP",
+    "price_egp": 5200,
+    "specs": {
+      "type": "مذربورد",
+      "socket": "LGA1700",
+      "chipset": "B760"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-011",
+    "name": "NovaGraphics RX 7600",
+    "category_id": "CMP",
+    "price_egp": 13500,
+    "specs": {
+      "type": "كارت شاشة",
+      "vram": "8GB GDDR6",
+      "chipset": "AMD RX 7600"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-012",
+    "name": "NovaGraphics RTX 4060",
+    "category_id": "CMP",
+    "price_egp": 16500,
+    "specs": {
+      "type": "كارت شاشة",
+      "vram": "8GB GDDR6",
+      "chipset": "NVIDIA RTX 4060"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-013",
+    "name": "NovaBoard Z790 (Intel)",
+    "category_id": "CMP",
+    "price_egp": 8500,
+    "specs": {
+      "type": "مذربورد",
+      "socket": "LGA1700",
+      "chipset": "Z790"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-014",
+    "name": "NovaGraphics RTX 4070",
+    "category_id": "CMP",
+    "price_egp": 26000,
+    "specs": {
+      "type": "كارت شاشة",
+      "vram": "12GB GDDR6X",
+      "chipset": "NVIDIA RTX 4070"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-CMP-015",
+    "name": "NovaGraphics RTX 4080",
+    "category_id": "CMP",
+    "price_egp": 42000,
+    "specs": {
+      "type": "كارت شاشة",
+      "vram": "16GB GDDR6X",
+      "chipset": "NVIDIA RTX 4080"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 12,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-001",
+    "name": "NovaLink Screen Protector (Laptop)",
+    "category_id": "ACC",
+    "price_egp": 150,
+    "specs": {
+      "type": "واقي شاشة",
+      "compatibility": "عام"
+    },
+    "status_ar": "غير متوفر حاليًا",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-002",
+    "name": "NovaLink USB-C Cable 1m",
+    "category_id": "ACC",
+    "price_egp": 120,
+    "specs": {
+      "type": "كابل USB-C إلى USB-C",
+      "compatibility": "عام"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-003",
+    "name": "NovaLink Cleaning Kit",
+    "category_id": "ACC",
+    "price_egp": 220,
+    "specs": {
+      "type": "طقم تنظيف",
+      "compatibility": "شاشات وكيبورد"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-004",
+    "name": "NovaLink HDMI Cable 2m",
+    "category_id": "ACC",
+    "price_egp": 180,
+    "specs": {
+      "type": "كابل HDMI 2.1",
+      "compatibility": "عام"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-005",
+    "name": "NovaLink Cooling Pad",
+    "category_id": "ACC",
+    "price_egp": 480,
+    "specs": {
+      "type": "قاعدة تبريد لابتوب",
+      "compatibility": "حتى 17 بوصة"
+    },
+    "status_ar": "كمية محدودة",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-006",
+    "name": "NovaLink Laptop Stand",
+    "category_id": "ACC",
+    "price_egp": 550,
+    "specs": {
+      "type": "ستاند لابتوب ألومنيوم",
+      "compatibility": "عام"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-007",
+    "name": "NovaLink Laptop Bag 15-inch",
+    "category_id": "ACC",
+    "price_egp": 650,
+    "specs": {
+      "type": "شنطة لابتوب",
+      "compatibility": "حتى 15.6 بوصة"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  },
+  {
+    "id": "NVT-ACC-008",
+    "name": "NovaLink USB-C Hub 6-in-1",
+    "category_id": "ACC",
+    "price_egp": 950,
+    "specs": {
+      "type": "هَب USB-C متعدد المنافذ",
+      "compatibility": "عام"
+    },
+    "status_ar": "متوفر",
+    "warranty_months": 6,
+    "warranty_note_ar": "ضمان الشركة المصنعة ضد عيوب التصنيع، ولا يشمل الكسر أو التلف بالسوائل أو سوء الاستخدام."
+  }
+]

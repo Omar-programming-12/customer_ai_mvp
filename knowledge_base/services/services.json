@@ -1,0 +1,242 @@
+[
+  {
+    "id": "SVC-01",
+    "name_ar": "بيع أجهزة كمبيوتر ولابتوب",
+    "category_ar": "مبيعات",
+    "description_ar": "بيع كافة فئات أجهزة الكمبيوتر واللابتوب الجديدة.",
+    "available_at": "all_branches",
+    "price_note_ar": "حسب سعر المنتج"
+  },
+  {
+    "id": "SVC-02",
+    "name_ar": "تركيب وتجميع أجهزة كمبيوتر مخصصة",
+    "category_ar": "تجميع",
+    "description_ar": "تجميع جهاز كمبيوتر مكتبي بمواصفات يختارها العميل.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب المكونات المختارة"
+  },
+  {
+    "id": "SVC-03",
+    "name_ar": "صيانة أجهزة اللابتوب",
+    "category_ar": "صيانة",
+    "description_ar": "فحص وإصلاح أعطال أجهزة اللابتوب.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب تقييم الفني"
+  },
+  {
+    "id": "SVC-04",
+    "name_ar": "صيانة أجهزة الكمبيوتر المكتبي",
+    "category_ar": "صيانة",
+    "description_ar": "فحص وإصلاح أعطال أجهزة الكمبيوتر المكتبي.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب تقييم الفني"
+  },
+  {
+    "id": "SVC-05",
+    "name_ar": "استبدال شاشات اللابتوب",
+    "category_ar": "صيانة",
+    "description_ar": "استبدال شاشة اللابتوب التالفة بشاشة أصلية متوافقة.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب الموديل"
+  },
+  {
+    "id": "SVC-06",
+    "name_ar": "استبدال بطاريات اللابتوب",
+    "category_ar": "صيانة",
+    "description_ar": "استبدال بطارية اللابتوب المستهلكة ببطارية جديدة.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب الموديل"
+  },
+  {
+    "id": "SVC-07",
+    "name_ar": "تنظيف داخلي للأجهزة",
+    "category_ar": "صيانة",
+    "description_ar": "تنظيف الأتربة الداخلية وتغيير المعجون الحراري.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "سعر ثابت"
+  },
+  {
+    "id": "SVC-08",
+    "name_ar": "تثبيت نظام التشغيل والتعريفات",
+    "category_ar": "دعم فني",
+    "description_ar": "تثبيت أو إعادة تثبيت Windows وتعريفات الجهاز.",
+    "available_at": "all_branches",
+    "price_note_ar": "سعر ثابت"
+  },
+  {
+    "id": "SVC-09",
+    "name_ar": "إزالة الفيروسات وبرامج التجسس",
+    "category_ar": "دعم فني",
+    "description_ar": "فحص الجهاز وإزالة البرامج الضارة.",
+    "available_at": "all_branches",
+    "price_note_ar": "سعر ثابت"
+  },
+  {
+    "id": "SVC-10",
+    "name_ar": "ترقية الرام",
+    "category_ar": "صيانة",
+    "description_ar": "إضافة أو استبدال ذاكرة الرام لتحسين الأداء.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب سعر القطعة"
+  },
+  {
+    "id": "SVC-11",
+    "name_ar": "ترقية التخزين إلى SSD",
+    "category_ar": "صيانة",
+    "description_ar": "استبدال الهارد التقليدي بقرص SSD أسرع.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب سعر القطعة"
+  },
+  {
+    "id": "SVC-12",
+    "name_ar": "نقل البيانات بين الأجهزة",
+    "category_ar": "دعم فني",
+    "description_ar": "نقل الملفات والبيانات من جهاز قديم إلى جهاز جديد.",
+    "available_at": "all_branches",
+    "price_note_ar": "سعر ثابت"
+  },
+  {
+    "id": "SVC-13",
+    "name_ar": "استرجاع البيانات المفقودة",
+    "category_ar": "صيانة متقدمة",
+    "description_ar": "محاولة استعادة الملفات المحذوفة أو التالفة من وسائط التخزين.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب حالة الجهاز"
+  },
+  {
+    "id": "SVC-14",
+    "name_ar": "نسخ احتياطي للبيانات",
+    "category_ar": "دعم فني",
+    "description_ar": "إعداد نسخة احتياطية دورية لبيانات العميل.",
+    "available_at": "all_branches",
+    "price_note_ar": "سعر ثابت"
+  },
+  {
+    "id": "SVC-15",
+    "name_ar": "تركيب شبكات منزلية",
+    "category_ar": "شبكات",
+    "description_ar": "تجهيز وتوزيع شبكة واي فاي داخل المنزل.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب حجم المنزل"
+  },
+  {
+    "id": "SVC-16",
+    "name_ar": "تركيب شبكات للشركات",
+    "category_ar": "شبكات",
+    "description_ar": "تصميم وتركيب شبكة داخلية لمقرات الشركات.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "عرض سعر مخصص"
+  },
+  {
+    "id": "SVC-17",
+    "name_ar": "الدعم الفني عن بُعد",
+    "category_ar": "دعم فني",
+    "description_ar": "حل المشاكل البرمجية البسيطة عن بعد عبر الإنترنت.",
+    "available_at": "all_branches",
+    "price_note_ar": "استشارة أولية مجانية"
+  },
+  {
+    "id": "SVC-18",
+    "name_ar": "الدعم الفني داخل الفرع",
+    "category_ar": "دعم فني",
+    "description_ar": "استقبال استفسارات ومشاكل الأجهزة داخل الفرع.",
+    "available_at": "all_branches",
+    "price_note_ar": "استشارة أولية مجانية"
+  },
+  {
+    "id": "SVC-19",
+    "name_ar": "شراء الضمان الممتد",
+    "category_ar": "خدمة ما بعد البيع",
+    "description_ar": "تمديد فترة ضمان المنتج بعد انتهاء الضمان الأساسي.",
+    "available_at": "all_branches",
+    "price_note_ar": "حسب فئة المنتج"
+  },
+  {
+    "id": "SVC-20",
+    "name_ar": "تدريب استخدام البرامج المكتبية",
+    "category_ar": "تدريب",
+    "description_ar": "جلسات تدريبية لاستخدام برامج Office الأساسية.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "سعر ثابت للجلسة"
+  },
+  {
+    "id": "SVC-21",
+    "name_ar": "استشارات شراء أجهزة للشركات",
+    "category_ar": "استشارات",
+    "description_ar": "مساعدة الشركات في اختيار الأجهزة المناسبة لاحتياجاتها.",
+    "available_at": "all_branches",
+    "price_note_ar": "مجاني"
+  },
+  {
+    "id": "SVC-22",
+    "name_ar": "عروض أسعار مخصصة للشركات",
+    "category_ar": "مبيعات شركات",
+    "description_ar": "إعداد عرض سعر رسمي لطلبات الشركات الكبيرة.",
+    "available_at": "all_branches",
+    "price_note_ar": "مجاني"
+  },
+  {
+    "id": "SVC-23",
+    "name_ar": "تجهيز أجهزة الألعاب المخصصة",
+    "category_ar": "تجميع",
+    "description_ar": "تجميع جهاز ألعاب بمواصفات ومكونات يختارها العميل.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب المكونات المختارة"
+  },
+  {
+    "id": "SVC-24",
+    "name_ar": "تركيب برامج الحماية والأمان",
+    "category_ar": "دعم فني",
+    "description_ar": "تثبيت وإعداد برامج مكافحة الفيروسات وأدوات الحماية.",
+    "available_at": "all_branches",
+    "price_note_ar": "سعر ثابت"
+  },
+  {
+    "id": "SVC-25",
+    "name_ar": "توريد أجهزة للمدارس والجامعات",
+    "category_ar": "مبيعات مؤسسات",
+    "description_ar": "توريد أجهزة بأعداد كبيرة للمؤسسات التعليمية.",
+    "available_at": "all_branches",
+    "price_note_ar": "عرض سعر مخصص"
+  },
+  {
+    "id": "SVC-26",
+    "name_ar": "عقود صيانة سنوية للشركات",
+    "category_ar": "عقود خدمة",
+    "description_ar": "عقد صيانة دوري لأجهزة الشركة على مدار العام.",
+    "available_at": "all_branches",
+    "price_note_ar": "عرض سعر مخصص"
+  },
+  {
+    "id": "SVC-27",
+    "name_ar": "خدمة التوصيل السريع",
+    "category_ar": "لوجستيات",
+    "description_ar": "توصيل الطلبات العاجلة خلال مدة أقصر من المعتاد.",
+    "available_at": "all_branches",
+    "price_note_ar": "حسب المنطقة"
+  },
+  {
+    "id": "SVC-28",
+    "name_ar": "المساعدة في إعداد خطط التقسيط",
+    "category_ar": "دعم مالي",
+    "description_ar": "توضيح خيارات التقسيط المتاحة مع شركاء التمويل.",
+    "available_at": "all_branches",
+    "price_note_ar": "مجاني"
+  },
+  {
+    "id": "SVC-29",
+    "name_ar": "تقييم واستبدال الأجهزة المستعملة (تريد إن)",
+    "category_ar": "خدمة ما بعد البيع",
+    "description_ar": "تقييم جهاز قديم يعمل ومنح رصيد شراء مقابله.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "حسب تقييم الجهاز"
+  },
+  {
+    "id": "SVC-30",
+    "name_ar": "إعداد أجهزة الشركات دفعة واحدة",
+    "category_ar": "خدمة شركات",
+    "description_ar": "تجهيز وإعداد عدد كبير من الأجهزة دفعة واحدة لشركة.",
+    "available_at": "repair_center_branches",
+    "price_note_ar": "عرض سعر مخصص"
+  }
+]

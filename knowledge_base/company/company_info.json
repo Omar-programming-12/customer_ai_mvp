@@ -1,0 +1,21 @@
+{
+  "legal_name_ar": "نوفاتك لتجارة أجهزة الكمبيوتر ش.م.م (بيانات وهمية تجريبية)",
+  "brand_name": "NovaTech",
+  "founded_year": 2018,
+  "industry_ar": "بيع أجهزة الكمبيوتر واللابتوب والملحقات وخدمات الصيانة والدعم الفني",
+  "description_ar": "NovaTech هي شركة مصرية متخصصة في بيع أجهزة اللابتوب والكمبيوتر وملحقاتهما، وتقديم خدمات الصيانة والدعم الفني للأفراد والشركات والمؤسسات التعليمية، من خلال شبكة فروع تغطي عدة محافظات.",
+  "headquarters_address_ar": "مدينة نصر، شارع عباس العقاد، القاهرة",
+  "phone": "01000000000",
+  "email": "support@novatech.example",
+  "website": "www.novatech.example",
+  "facebook_page": "facebook.com/novatech.example",
+  "service_area_ar": "جميع محافظات جمهورية مصر العربية عبر 13 فرعًا ونظام شحن وطني",
+  "branch_count": 13,
+  "employee_count_approx": 260,
+  "languages_supported": [
+    "العربية",
+    "الإنجليزية"
+  ],
+  "currency": "EGP",
+  "disclaimer_ar": "بيانات وهمية بالكامل تم إنشاؤها لأغراض الاختبار والتطوير فقط، ولا تمثل شركة حقيقية أو معلومات شخصية حقيقية."
+}
