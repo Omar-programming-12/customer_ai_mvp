@@ -218,13 +218,28 @@ def load_branches() -> list[dict]:
     return _load_json(KNOWLEDGE_BASE_DIR / "branches" / "branches.json")
 
 
+def load_categories() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "categories.json")
+
+
+def load_services() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "services" / "services.json")
+
+
+def load_company_info() -> dict:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "company" / "company_info.json")
+
+
 def load_all_chunks() -> list[str]:
 
-    company_info = _load_json(KNOWLEDGE_BASE_DIR / "company" / "company_info.json")
-    categories = _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "categories.json")
+    company_info = load_company_info()
+    categories = load_categories()
     products = _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "products.json")
     branches = load_branches()
-    services = _load_json(KNOWLEDGE_BASE_DIR / "services" / "services.json")
+    services = load_services()
     offers = _load_json(KNOWLEDGE_BASE_DIR / "offers" / "offers.json")
 
     category_names_ar = {

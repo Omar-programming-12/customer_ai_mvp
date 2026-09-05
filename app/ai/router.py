@@ -15,9 +15,14 @@ Every message resolves to exactly one route:
     Retrieval found some relevant signal, but nothing strong enough to
     trust as a definite answer by itself.
 - out_of_scope:
-    Retrieval found no meaningful signal at all - the question isn't about
-    anything in the knowledge base (a general-knowledge question, a joke
-    request, etc).
+    Retrieval found no meaningful signal at all, AND the question doesn't
+    even share a word with the company's product/service domain - it isn't
+    about anything in the knowledge base (a general-knowledge question, a
+    joke request, etc). A question that names something we clearly sell or
+    service (e.g. "اقترحلي جهاز للبرمجة") but didn't match any specific
+    chunk well is routed company_low_confidence instead - it's on-topic,
+    just not confidently answerable, which is a different thing from not
+    being about us at all (see app/ai/entities.py's category vocabulary).
 
 A message that opens with a greeting but also asks something concrete
 (e.g. "صباح الخير، بكام Gaming X؟") is NOT small_talk: only a message that
@@ -28,7 +33,7 @@ import re
 from dataclasses import dataclass
 from enum import Enum
 
-from app.ai import rag
+from app.ai import rag, entities
 from app.ai.normalize import normalize_text, tokenize
 
 
@@ -94,6 +99,19 @@ def route_message(message: str) -> RouteDecision:
     )
 
     if result.confidence == "none":
+
+        # No chunk was confident enough on its own, but the question still
+        # names something in our product/service domain (e.g. "جهاز",
+        # "جيمنج") - that's a company question we can't pin down precisely,
+        # not an out-of-scope one. Surface the best-available chunks as
+        # loose context; the low_confidence prompt already only uses them
+        # if they clearly answer the question, and says so otherwise.
+        if entities.is_company_domain_query(message, rag.company_category_vocabulary):
+            return RouteDecision(
+                route=Route.COMPANY_LOW_CONFIDENCE,
+                context="\n\n".join(result.weak_chunks)
+            )
+
         return RouteDecision(route=Route.OUT_OF_SCOPE)
 
     context = "\n\n".join(result.chunks)

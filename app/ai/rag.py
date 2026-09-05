@@ -174,6 +174,13 @@ class RetrievalResult:
     anchored: bool
     top_semantic_score: float
     top_keyword_score: float
+    # Top chunks by raw semantic score alone, computed regardless of
+    # whether anything qualified. Not used for "confident"/"low_confidence"
+    # results (those already have real chunks) - it exists only for the
+    # router to fall back on when confidence is "none" but a domain/
+    # category signal says the question is on-topic anyway, so that case
+    # gets *something* plausible as context instead of an empty one.
+    weak_chunks: list[str]
 
 
 def search_company(
@@ -272,12 +279,19 @@ def search_company(
     else:
         confidence = "none"
 
+    weak_indexes = sorted(
+        semantic_scores,
+        key=lambda index: semantic_scores[index],
+        reverse=True
+    )[:top_k]
+
     return RetrievalResult(
         chunks=[chunks[index] for index in top_indexes],
         confidence=confidence,
         anchored=bool(anchored_indexes),
         top_semantic_score=max(semantic_scores.values(), default=0.0),
         top_keyword_score=max(keyword_scores.values(), default=0.0),
+        weak_chunks=[chunks[index] for index in weak_indexes],
     )
 
 
@@ -296,3 +310,4 @@ company_chunks = load_all_chunks()
 company_bm25_index = _build_bm25_index(company_chunks)
 company_embeddings = rag_index.load_index(company_chunks)
 company_entity_anchors = entities.build_branch_anchors(company_chunks)
+company_category_vocabulary = entities.build_category_vocabulary()
