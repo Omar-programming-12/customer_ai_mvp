@@ -116,7 +116,11 @@ _CATEGORY_VOCAB_DENYLIST = {"بعد"}
 # ("أجهزة", never "جهاز"), so a customer using the singular would otherwise
 # get no domain match at all. Extend this only when another such gap is
 # found in practice - it is not meant to grow into a general synonym list.
-_CATEGORY_VOCAB_EXTRA_SYNONYMS = {"جهاز", "لابتوب"}
+# "لاب" (colloquial short for "لابتوب") was added after "رشحلي لاب
+# للبرمجة" measured at 0.698 semantic similarity - just under the 0.70
+# supportive threshold, with zero keyword overlap - a real, observed gap,
+# not a speculative one.
+_CATEGORY_VOCAB_EXTRA_SYNONYMS = {"جهاز", "لابتوب", "لاب"}
 
 
 def build_category_vocabulary() -> set[str]:
