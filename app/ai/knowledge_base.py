@@ -1,7 +1,11 @@
 import json
+import logging
 from pathlib import Path
 
 from app.config import KNOWLEDGE_BASE_DIR
+
+
+logger = logging.getLogger(__name__)
 
 
 SPEC_LABELS_AR = {
@@ -140,7 +144,7 @@ def _render_product(product: dict, category_name_ar: str) -> str:
     return "\n".join(lines)
 
 
-def _render_branch(branch: dict) -> str:
+def render_branch(branch: dict) -> str:
 
     return (
         f"{branch['name_ar']} ({branch['city_ar']}):\n"
@@ -213,14 +217,54 @@ _POLICY_FILES = [
 ]
 
 
+def load_branches() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "branches" / "branches.json")
+
+
+def load_categories() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "categories.json")
+
+
+def load_products() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "products.json")
+
+
+def load_services() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "services" / "services.json")
+
+
+def load_offers() -> list[dict]:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "offers" / "offers.json")
+
+
+def load_unsupported_categories() -> list[dict]:
+    """Product categories the company is explicitly known NOT to carry
+    (e.g. mobile phones, cameras) - the negative-space counterpart to
+    categories.json. Kept as data, not Python, so adding another one
+    (e.g. "smart watches") never requires a code change - see
+    app.ai.entities.build_unsupported_category_anchors."""
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "unsupported_categories.json")
+
+
+def load_company_info() -> dict:
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "company" / "company_info.json")
+
+
 def load_all_chunks() -> list[str]:
 
-    company_info = _load_json(KNOWLEDGE_BASE_DIR / "company" / "company_info.json")
-    categories = _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "categories.json")
-    products = _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "products.json")
-    branches = _load_json(KNOWLEDGE_BASE_DIR / "branches" / "branches.json")
-    services = _load_json(KNOWLEDGE_BASE_DIR / "services" / "services.json")
-    offers = _load_json(KNOWLEDGE_BASE_DIR / "offers" / "offers.json")
+    company_info = load_company_info()
+    categories = load_categories()
+    products = load_products()
+    branches = load_branches()
+    services = load_services()
+    offers = load_offers()
 
     category_names_ar = {
         category["id"]: category["name_ar"]
@@ -237,7 +281,7 @@ def load_all_chunks() -> list[str]:
         for product in products
     ]
 
-    chunks += [_render_branch(branch) for branch in branches]
+    chunks += [render_branch(branch) for branch in branches]
     chunks += [_render_service(service) for service in services]
     chunks += [_render_offer(offer) for offer in offers]
 
@@ -246,6 +290,6 @@ def load_all_chunks() -> list[str]:
 
     chunks += _load_markdown_chunks(KNOWLEDGE_BASE_DIR / "faq" / "faq.md")
 
-    print("Number of chunks:", len(chunks))
+    logger.info("Number of chunks: %d", len(chunks))
 
     return chunks

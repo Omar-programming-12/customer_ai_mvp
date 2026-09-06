@@ -1,3 +1,4 @@
+import logging
 import time
 
 from google import genai
@@ -7,6 +8,8 @@ import numpy as np
 
 from app.config import GEMINI_API_KEY
 
+
+logger = logging.getLogger(__name__)
 
 EMBEDDING_MODEL = "gemini-embedding-001"
 
@@ -48,9 +51,9 @@ def _embed_batch_with_retry(batch: list[str], task_type: str):
             if not is_rate_limited or attempt == _MAX_RETRIES:
                 raise
 
-            print(
-                f"Gemini rate limit hit (attempt {attempt}/{_MAX_RETRIES}), "
-                f"waiting {delay}s before retrying..."
+            logger.warning(
+                "Gemini rate limit hit (attempt %d/%d), waiting %ds before retrying...",
+                attempt, _MAX_RETRIES, delay,
             )
 
             time.sleep(delay)

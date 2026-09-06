@@ -1,24 +1,7 @@
-processed_message_ids: set[str] = set()
+"""Message dedup, backed by app.storage (SQLite) instead of an in-memory
+set, so a duplicate Meta redelivery is still caught after a process
+restart or across multiple workers sharing the same DB file - the
+in-memory set could do neither.
+"""
 
-
-def already_processed(message_id: str) -> bool:
-
-    if not message_id:
-        return False
-
-    if message_id in processed_message_ids:
-        return True
-
-    processed_message_ids.add(message_id)
-
-    # Keep memory small for MVP
-    if len(processed_message_ids) > 1000:
-        oldest_message_id = next(
-            iter(processed_message_ids)
-        )
-
-        processed_message_ids.remove(
-            oldest_message_id
-        )
-
-    return False
+from app.storage import message_already_processed as already_processed
