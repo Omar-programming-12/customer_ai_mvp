@@ -143,6 +143,25 @@ def test_branch_phone_number_query_is_not_confused_with_mobile_phones(monkeypatc
 
 
 # ==========================================
+# Genuine out-of-scope: distinct from both meaningless and
+# unsupported_category - a real question, about nothing in our domain at
+# all (not even a category we explicitly don't carry).
+# ==========================================
+
+def test_joke_request_is_genuine_out_of_scope_not_unsupported_category(monkeypatch):
+    """"احكيلي نكتة" names no product category (supported or not) - it must
+    resolve to the existing generic out_of_scope route, never
+    unsupported_category (nothing to match there) and never meaningless
+    (it's a real, if off-topic, request)."""
+
+    monkeypatch.setattr(rag, "_semantic_search", lambda q, e, k: [])
+
+    decision = route_message("احكيلي نكتة")
+
+    assert decision.route == Route.OUT_OF_SCOPE
+
+
+# ==========================================
 # Generation layer: no RAG, no Groq call for this route
 # ==========================================
 
