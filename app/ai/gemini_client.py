@@ -47,6 +47,15 @@ _MAX_TOOL_ROUNDS = 2
 # question it has no answer for.
 _OUT_OF_SCOPE_REPLY = "أنا هنا للمساعدة في استفسارات NovaTech فقط 🙂"
 
+# unsupported_category is also answered directly, without RAG or a
+# generation call: the router already found a deterministic, explicit
+# mention of something we don't carry (decision.context holds its Arabic
+# label) - there's nothing for retrieval or the model to add, and letting
+# either run risks exactly the bug this route exists to prevent (a noisy
+# semantic match surfacing an unrelated product instead of a clear "not
+# available").
+_UNSUPPORTED_CATEGORY_REPLY_TEMPLATE = "عذرًا، لا نوفر حاليًا {label} في NovaTech 🙂"
+
 _FALLBACK_REPLY = "عذرًا، لم أتمكن من إنشاء الرد حاليًا."
 
 
@@ -214,11 +223,22 @@ def _generate_with_tools(prompt: str, history: list[dict]) -> str | None:
                 "content": json.dumps(result, ensure_ascii=False),
             })
 
-    # Tool rounds exhausted but the model still wants to call one - force a
-    # plain-text answer from whatever tool results were already gathered.
+    # Tool rounds exhausted but the model still wants to call one more -
+    # force a plain-text answer from whatever tool results were already
+    # gathered. Omitting `tools` here is NOT enough to stop it: the
+    # conversation history still shows a tool-calling pattern (assistant
+    # tool_calls -> tool result, twice), and the model can still emit a
+    # tool_call in its output regardless of what this request declares.
+    # Groq then rejects the whole request with 400 "Tool choice is none,
+    # but model called a tool" - a real, reproduced failure, not a
+    # hypothetical one. Explicitly passing tool_choice="none" (with the
+    # schema still attached so the choice is meaningful) is what actually
+    # constrains the model server-side to text-only output.
     final_response = groq_client.chat.completions.create(
         model=_GROQ_MODEL,
         messages=messages,
+        tools=tools.TOOL_SPECS,
+        tool_choice="none",
     )
 
     return final_response.choices[0].message.content
@@ -227,14 +247,23 @@ def _generate_with_tools(prompt: str, history: list[dict]) -> str | None:
 def generate_ai_reply(
     customer_message: str,
     history: list[dict] | None = None,
-) -> str:
+) -> str | None:
+    """Returns None for Route.MEANINGLESS specifically - a signal to the
+    caller (app.services.message_processor) to send nothing back at all,
+    not even a fixed reply. Every other route always returns a string."""
 
     decision = route_message(customer_message)
 
     logger.info("Route: %s", decision.route.value)
 
+    if decision.route == Route.MEANINGLESS:
+        return None
+
     if decision.route == Route.OUT_OF_SCOPE:
         return _OUT_OF_SCOPE_REPLY
+
+    if decision.route == Route.UNSUPPORTED_CATEGORY:
+        return _UNSUPPORTED_CATEGORY_REPLY_TEMPLATE.format(label=decision.context)
 
     history = history or []
 

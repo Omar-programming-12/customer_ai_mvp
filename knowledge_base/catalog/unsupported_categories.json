@@ -1,0 +1,22 @@
+[
+  {
+    "id": "MOBILE",
+    "label_ar": "الهواتف المحمولة",
+    "aliases": [
+      "موبايل", "موبايلات", "هاتف", "هواتف", "جوال", "جوالات",
+      "تليفون محمول", "ايفون", "اندرويد", "سامسونج جالكسي",
+      "mobile", "mobiles", "phone", "phones", "smartphone", "smartphones",
+      "iphone", "android"
+    ],
+    "exclude_if_present": ["رقم", "فرع", "تواصل", "اتصال"]
+  },
+  {
+    "id": "CAMERA",
+    "label_ar": "كاميرات التصوير",
+    "aliases": [
+      "كاميرا", "كاميرات", "كاميرا رقمية", "كانون", "نيكون",
+      "camera", "cameras", "dslr", "canon", "nikon"
+    ],
+    "exclude_if_present": ["ويب", "web", "webcam"]
+  }
+]

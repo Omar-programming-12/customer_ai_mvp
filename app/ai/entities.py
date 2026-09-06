@@ -24,6 +24,16 @@ This module builds two different kinds of signal:
   never forces or boosts retrieval; it only tells the router that a
   question with no confident chunk match still isn't out_of_scope, because
   it names something we clearly sell/service.
+
+- Unsupported-category anchors (build_unsupported_category_anchors /
+  find_unsupported_category) are the negative-space counterpart to branch
+  anchors: a small, explicit list of things we're known NOT to carry
+  (mobile phones, cameras, ...), matched the same deterministic way. A
+  clear mention overrides RAG/semantic noise entirely - the router checks
+  this first and, on a match, answers directly without running retrieval
+  at all, so an unrelated product (a tablet, a laptop) can never get
+  surfaced for a category we don't sell just because it scored well by
+  embedding coincidence.
 """
 
 import re
@@ -33,6 +43,7 @@ from app.ai.knowledge_base import (
     load_categories,
     load_company_info,
     load_services,
+    load_unsupported_categories,
     render_branch,
 )
 from app.ai.normalize import normalize_text, tokenize
@@ -156,3 +167,56 @@ def is_company_domain_query(question: str, vocabulary: set[str]) -> bool:
     independent of chunk-level retrieval confidence."""
 
     return bool(set(tokenize(question)) & vocabulary)
+
+
+# ==========================================
+# Unsupported-category anchors (negative-space signal, checked first)
+# ==========================================
+
+def build_unsupported_category_anchors() -> list[dict]:
+    """One anchor per knowledge_base/catalog/unsupported_categories.json
+    entry: a label (for the reply) plus alias/exclusion phrases, all data-
+    driven - extend the JSON file to cover another category, no code
+    change needed here."""
+
+    anchors = []
+
+    for category in load_unsupported_categories():
+
+        anchors.append({
+            "id": category["id"],
+            "label": category["label_ar"],
+            "aliases": {normalize_text(alias) for alias in category["aliases"]},
+            "exclude_if_present": {
+                normalize_text(term) for term in category.get("exclude_if_present", [])
+            },
+        })
+
+    return anchors
+
+
+def _phrase_present(text: str, phrase: str) -> bool:
+
+    return bool(re.search(rf"(?<!\w){re.escape(phrase)}(?!\w)", text))
+
+
+def find_unsupported_category(question: str, anchors: list[dict]) -> dict | None:
+    """The first unsupported-category anchor whose alias appears as a
+    whole word/phrase in the question, and none of its exclusion terms
+    do (e.g. "كاميرا" matches the CAMERA anchor, but "كاميرا ويب" doesn't,
+    since "ويب" is an exclusion term for that anchor - it means the
+    webcams we actually sell, not the photography cameras we don't).
+    Plain substring/word-boundary match on normalized text, same
+    mechanism as find_anchor_matches - deterministic, no embeddings."""
+
+    normalized_question = normalize_text(question)
+
+    for anchor in anchors:
+
+        if any(_phrase_present(normalized_question, term) for term in anchor["exclude_if_present"]):
+            continue
+
+        if any(_phrase_present(normalized_question, alias) for alias in anchor["aliases"]):
+            return anchor
+
+    return None

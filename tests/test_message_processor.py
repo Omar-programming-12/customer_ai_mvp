@@ -76,3 +76,29 @@ async def test_process_message_failure_sends_fallback_and_skips_history(temp_db)
     # A failed turn is never recorded - a half-answered exchange would
     # only confuse the next turn's history-based context.
     assert memory.get_history("psid-z") == []
+
+
+async def test_process_message_meaningless_sends_nothing_and_skips_history(temp_db):
+    """generate_ai_reply returning None (Route.MEANINGLESS) must result in
+    no Messenger send at all and no conversation-history entry - not even
+    a fixed reply, per the desired UX (silence, not a canned rejection)."""
+
+    sent = []
+
+    async def fake_send(psid, text):
+        sent.append((psid, text))
+
+    with patch(
+        "app.services.message_processor.generate_ai_reply",
+        return_value=None,
+    ) as fake_reply, patch(
+        "app.services.message_processor.send_message_to_messenger",
+        side_effect=fake_send,
+    ):
+        await process_message("psid-w", "؟؟", "mid-w")
+
+    fake_reply.assert_called_once_with("؟؟", [])
+    assert sent == []
+
+    from app.ai import memory
+    assert memory.get_history("psid-w") == []

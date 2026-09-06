@@ -11,7 +11,7 @@ from rank_bm25 import BM25Okapi
 
 from app.ai import rag
 from app.ai.normalize import tokenize
-from app.ai.router import Route, is_small_talk, route_message
+from app.ai.router import Route, is_meaningless, is_small_talk, route_message
 
 
 @pytest.mark.parametrize("message,expected", [
@@ -27,6 +27,38 @@ from app.ai.router import Route, is_small_talk, route_message
 ])
 def test_is_small_talk(message, expected):
     assert is_small_talk(message) == expected
+
+
+@pytest.mark.parametrize("message,expected", [
+    ("؟", True),
+    ("؟؟", True),
+    ("...", True),
+    ("   ", True),
+    ("", True),
+    ("!!!", True),
+    ("....؟؟؟!!!", True),
+    # Real (if terse) questions must NOT be swept up as meaningless just
+    # because tokenize() would drop them as stopwords.
+    ("كام؟", False),
+    ("ليه؟", False),
+    ("طيب عندكو ايفون؟", False),
+    ("عايز لابتوب", False),
+    ("7000", False),
+])
+def test_is_meaningless(message, expected):
+    assert is_meaningless(message) == expected
+
+
+def test_route_message_meaningless_skips_retrieval_entirely(monkeypatch):
+
+    def fail_if_called(*args, **kwargs):
+        raise AssertionError("retrieval must not run for a meaningless message")
+
+    monkeypatch.setattr(rag, "_semantic_search", fail_if_called)
+
+    for message in ["؟", "؟؟", "...", "   "]:
+        decision = route_message(message)
+        assert decision.route == Route.MEANINGLESS
 
 
 def _fake_semantic_search(scores: dict[int, float]):

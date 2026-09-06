@@ -32,6 +32,17 @@ async def process_message(
             history,
         )
 
+        # generate_ai_reply returns None for a meaningless/non-actionable
+        # message (see app.ai.router.Route.MEANINGLESS) - the classification
+        # itself lives entirely in the routing layer; this is just the
+        # generation-layer contract's other valid outcome besides a string,
+        # not a new decision made here. The message was already logged
+        # above (and by the webhook before this call); there's simply
+        # nothing to send back or record as a conversation turn.
+        if ai_reply is None:
+            logger.info("No reply for %s (meaningless/non-actionable message).", message_id)
+            return
+
         logger.info("AI reply for %s: %s", message_id, ai_reply)
 
         await send_message_to_messenger(

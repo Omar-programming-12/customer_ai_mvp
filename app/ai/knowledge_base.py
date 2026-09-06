@@ -242,6 +242,16 @@ def load_offers() -> list[dict]:
     return _load_json(KNOWLEDGE_BASE_DIR / "offers" / "offers.json")
 
 
+def load_unsupported_categories() -> list[dict]:
+    """Product categories the company is explicitly known NOT to carry
+    (e.g. mobile phones, cameras) - the negative-space counterpart to
+    categories.json. Kept as data, not Python, so adding another one
+    (e.g. "smart watches") never requires a code change - see
+    app.ai.entities.build_unsupported_category_anchors."""
+
+    return _load_json(KNOWLEDGE_BASE_DIR / "catalog" / "unsupported_categories.json")
+
+
 def load_company_info() -> dict:
 
     return _load_json(KNOWLEDGE_BASE_DIR / "company" / "company_info.json")

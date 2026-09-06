@@ -3,6 +3,16 @@ any Gemini generation call, without adding an extra Gemini call to do it.
 
 Every message resolves to exactly one route:
 
+- meaningless:
+    No letters or digits at all after normalization - pure punctuation,
+    whitespace, or repeated symbols ("؟؟", "...", "   "). Checked first,
+    before everything else, purely locally: no reply is sent at all (see
+    app.ai.gemini_client.generate_ai_reply / app.services.
+    message_processor), and no RAG/BM25/embedding/Groq call happens.
+    Deliberately narrower than "tokenize() found nothing": a message that
+    IS just a stopword (e.g. "كام؟") still has real letters and a
+    plausible, if underspecified, intent - only a complete absence of any
+    letter/digit is treated as non-actionable.
 - small_talk:
     Greeting / thanks / farewell, nothing else in the message. Detected
     locally (regex over normalized text) - no embedding call, no BM25, no
@@ -14,6 +24,15 @@ Every message resolves to exactly one route:
 - company_low_confidence:
     Retrieval found some relevant signal, but nothing strong enough to
     trust as a definite answer by itself.
+- unsupported_category:
+    The question explicitly names a product category we're known NOT to
+    carry (mobile phones, cameras - see
+    knowledge_base/catalog/unsupported_categories.json). Checked first,
+    before any retrieval: a clear mention here is deterministic evidence
+    that overrides whatever RAG/semantic noise might otherwise suggest -
+    e.g. "موبايل في حدود 7000" used to surface an unrelated tablet purely
+    because it scored well by embedding coincidence. context carries the
+    category's Arabic label for the reply.
 - out_of_scope:
     Retrieval found no meaningful signal at all, AND the question doesn't
     even share a word with the company's product/service domain - it isn't
@@ -54,9 +73,11 @@ logger = logging.getLogger(__name__)
 
 
 class Route(str, Enum):
+    MEANINGLESS = "meaningless"
     SMALL_TALK = "small_talk"
     COMPANY_CONFIDENT = "company_confident"
     COMPANY_LOW_CONFIDENCE = "company_low_confidence"
+    UNSUPPORTED_CATEGORY = "unsupported_category"
     OUT_OF_SCOPE = "out_of_scope"
 
 
@@ -64,6 +85,20 @@ class Route(str, Enum):
 class RouteDecision:
     route: Route
     context: str | None = None
+
+
+_WORD_CHAR_PATTERN = re.compile(r"\w", re.UNICODE)
+
+
+def is_meaningless(message: str) -> bool:
+    """True if the message has no letters or digits at all, once
+    normalized - pure punctuation, whitespace, or repeated symbols. Not
+    the same check as "tokenize() is empty": tokenize() also drops
+    stopwords, which would wrongly catch a real (if terse) question like
+    "كام؟" - this only fires when there is no actual word content to
+    react to in the first place."""
+
+    return not _WORD_CHAR_PATTERN.search(normalize_text(message))
 
 
 # Small-talk phrases only: greetings, thanks, farewells, simple pleasantries.
@@ -122,8 +157,23 @@ def _retrieve(message: str):
 
 def route_message(message: str) -> RouteDecision:
 
+    if is_meaningless(message):
+        return RouteDecision(route=Route.MEANINGLESS)
+
     if is_small_talk(message):
         return RouteDecision(route=Route.SMALL_TALK)
+
+    # Checked before any retrieval: a clear, explicit mention of a known-
+    # unsupported category is deterministic evidence that must win over
+    # whatever a noisy embedding score might otherwise suggest (an
+    # unrelated tablet/laptop scoring well for "موبايل..." by coincidence).
+    # No RAG/embedding call happens on this path at all.
+    unsupported = entities.find_unsupported_category(
+        message, rag.company_unsupported_category_anchors
+    )
+
+    if unsupported:
+        return RouteDecision(route=Route.UNSUPPORTED_CATEGORY, context=unsupported["label"])
 
     result, domain_match = _retrieve(message)
 
